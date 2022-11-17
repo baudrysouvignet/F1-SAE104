@@ -164,6 +164,13 @@ header #burgercontent .burger.closeclick:after {
     top: 3.5px;
     transform: rotate(-46.97deg);
 }
+@media only screen and (max-width: 950px) {
+    header {
+        margin-left: 20px;
+        width: calc(100% - 40px);
+    }
+    
+}
 
 @media only screen and (max-width: 530px) {
     header nav {
