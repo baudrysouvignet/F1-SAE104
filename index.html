@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <link rel="stylesheet" href="src/css/global.css">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/index.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaudryF1</title>
+</head>
+
+<body>
+    <!-- position fixed -->
+    <header id="header" class="close">
+        <a class="picturea" href="#">
+            <picture>
+                <source media="(max-width: 800px)" srcset="src/img/Logo/Mobile.webp" sizes="30px">
+                <img src="src/img/Logo/Desktop.webp" alt="Logo Baudry Souvignet">
+            </picture>
+        </a>
+        <nav>
+            <a href="">Accueil</a>
+            <a href="">La genése de ma passion</a>
+            <a href="">La FIA en 2022</a>
+            <a href="">Me contacter</a>
+        </nav>
+        <div id="burgercontent" onclick="burgerclick()">
+            <div class="burger open" id="burger"></div>
+        </div>
+    </header>
+
+    <main>
+        <section id="page1">
+            <h1>LA FORMULE 1, le temple de la vitesse.</h1>
+            <article id="carrousel" class="image pos1">
+                <div class="carrousel">
+                    <img id="carr1" src="src/img/carrouselindex/CharleLeclerc.avif" alt="" srcset="">
+                    <img id="carr2" src="src/img/carrouselindex/MaxVerstapend.jpeg" alt="" srcset="">
+                    <img id="carr3" src="src/img/carrouselindex/pitstop.jpeg" alt="" srcset="">
+                </div>
+                <div class="info">
+                    <h3 id="carrtextimg" class="gris">Charle Leclerc au circuit de SPA (Belgique).</h3>
+                    <div class="scrall">
+                        <img onclick="swip('remove')" id="choiceleft" src="src/img/icon/choice.svg" alt="" srcset="">
+                        <p id="choixeindice">1/3</p>
+                        <img onclick="swip('add')"  id="choiceright" src="src/img/icon/choice.svg" alt="" srcset="">
+                    </div>
+                </div>
+            </article>
+            <article class="texte">
+                <h2>Je vais pas par mantirn je vais pas vous dire que je suis passioné de F1 depuis l’age de mes 9
+                    ans ou je ne sais quoi. Pour moi, cette fole histoire F1 à commencer en 2020 lors l’avant
+                    derniére course de la saison.. </h2>
+                <button>En savoir d'avantage</button>
+            </article>
+        </section>
+
+        <section id="page2"></section>
+    </main>
+
+    <script src="src/js/header.js"></script>
+    <script src="src/js/index.js"></script>
+</body>
+
+</html>

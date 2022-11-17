@@ -1,0 +1,172 @@
+header {
+    z-index: 20;
+    position: fixed;
+    width: calc(100% - 100px);
+    height: 70px;
+    margin-left: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #999999;
+    background-color: #f3f3f3;
+}
+
+header img,
+header picture,
+header .picturea {
+    z-index: 3;
+    height: 30px;
+}
+
+header nav {
+    position: absolute;
+    right: -50px;
+    top: 0;
+    z-index: 2;
+    width: 400px;
+    height: 100vh;
+    background-color: #FFF;
+    transition: 0.6s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+
+header.close nav {
+
+    transition: 0s;
+    transform: translateY(100%);
+}
+
+header.open nav {
+    transform: translateY(0);
+}
+
+header nav a {
+    margin-left: 50px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    width: fit-content;
+    max-width: 300px;
+    height: fit-content;
+}
+
+/* Burger */
+header #burgercontent {
+    z-index: 3;
+    float: right;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+header #burgercontent .burger {
+    border-radius: 1px;
+    transition: 0.3s;
+    height: 1.5px;
+    position: absolute;
+    background-color: #1D1D1B;
+}
+
+header #burgercontent .burger:after,
+.burger:before {
+    content: '';
+    position: absolute;
+    background-color: #1D1D1B;
+    transition: 0.3s;
+    border-radius: 1px;
+
+    height: 1.5px;
+}
+
+/* burger open  */
+header #burgercontent .burger.open {
+    top: 50%;
+    left: 7.5px;
+    width: 20px;
+}
+
+header #burgercontent .burger.open:before {
+    top: -7.5px;
+}
+
+header #burgercontent .burger.open:after {
+    top: 7.5px;
+}
+
+header #burgercontent .burger.open:after,
+.burger.open:before {
+    width: 20px;
+    height: 1.5px;
+}
+
+/* Burger animation */
+header #burgercontent:hover {
+    background-color: #FFF;
+}
+
+header #burgercontent .burger.animation {
+    width: 1px;
+    top: 50%;
+    left: 7.5px;
+}
+
+header #burgercontent .burger.animation:before {
+    top: -3.5px;
+    left: 1px;
+    transform: rotate(46.97deg);
+}
+
+header #burgercontent .burger.animation:after {
+    top: 3.5px;
+    left: 1px;
+    transform: rotate(-46.97deg);
+}
+
+header #burgercontent .burger.animation:after,
+.burger.animation:before {
+    width: 10.26px;
+    height: 1.5px
+}
+
+/* Burger Close */
+header .burger.close,
+.burger.closeclick {
+    width: 0px;
+    top: 50%;
+    left: 7.5px;
+}
+
+header #burgercontent .burger.close:before,
+.burger.closeclick::before {
+    width: 20.52px;
+    top: 0px;
+    left: 0;
+    transform: rotate(46.97deg);
+}
+
+header #burgercontent .burger.close:after {
+    width: 20.52px;
+    left: 0;
+    top: 0px;
+    transform: rotate(-46.97deg);
+}
+
+header #burgercontent .burger.closeclick:after {
+    width: 10.52px;
+    left: 1px;
+    top: 3.5px;
+    transform: rotate(-46.97deg);
+}
+
+@media only screen and (max-width: 530px) {
+    header nav {
+        width: Calc(100% + 100px) !important;
+    }
+}
