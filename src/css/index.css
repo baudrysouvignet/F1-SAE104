@@ -1,14 +1,12 @@
 main {
     width: calc(100% - 100px);
     margin: 0px 50px;
-    
-    display: grid;
-    grid-template-columns: repeat(2, 100%);
-    grid-template-rows: repeat(2, 100vh);
+    height: fit-content;
 }
 
 section,
 article, section article.image .carrousel img {
+    float: left;
     width: 100%;
     height: 100%;
     display: grid;
@@ -69,7 +67,7 @@ section article.image .carrousel {
 section article.image .carrousel img {
     position: absolute;
     object-fit: cover;
-    transition: 0.5s;
+    transition: 0.8s;
 }
 
 section article.image.pos1 .carrousel #carr1,
@@ -154,7 +152,7 @@ section article.texte button {
     section {
         grid-template-columns: repeat(8, 1fr);
         grid-column-gap: 0px;
-        grid-template-rows: 100px 1fr 360px 1fr 30px;
+        grid-template-rows: 100px auto 360px 1fr 30px;
         grid-column: 1;
     }
 
