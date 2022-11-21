@@ -1,88 +1,56 @@
 header {
-    z-index: 20;
-    position: fixed;
     width: calc(100% - 100px);
-    height: 70px;
-    margin-left: 50px;
-
+    height: 35px;
+    margin: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    border-bottom: 1px solid #999999;
-    background-color: #f3f3f3;
 }
 
-header img,
-header picture,
-header .picturea {
-    z-index: 3;
-    height: 30px;
+header nav,
+header #burgercontent,
+header #burgercontent .burger,
+header #burgercontent .burger:after,
+header #burgercontent .burger:before {
+    transition: 0.7s;
 }
 
-header nav {
-    position: absolute;
-    right: -50px;
-    top: 0;
-    z-index: 2;
-    width: 400px;
-    height: 100vh;
-    background-color: #FFF;
-    transition: 0.6s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 50px;
+header>a,
+header>a picture,
+header>a picture img {
+    width: auto;
+    height: 35px;
 }
 
-header.close nav {
-
-    transition: 0s;
-    transform: translateY(100%);
-}
-
-header.open nav {
-    transform: translateY(0);
-}
-
-header nav a {
-    margin-left: 50px;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    width: fit-content;
-    max-width: 300px;
-    height: fit-content;
-}
-
-/* Burger */
 header #burgercontent {
-    z-index: 3;
-    float: right;
+    z-index: 10;
     position: relative;
+    float: right;
     width: 35px;
     height: 35px;
     cursor: pointer;
     border-radius: 6px;
-    transition: 0.3s;
 }
 
-header #burgercontent .burger {
-    border-radius: 1px;
-    transition: 0.3s;
-    height: 1.5px;
-    position: absolute;
-    background-color: #1D1D1B;
+header #burgercontent:hover,
+header #burgercontent:active .burger,
+header #burgercontent:active .burger:after,
+header #burgercontent:active .burger:before {
+    background-color: white;
 }
 
+header #burgercontent:active {
+    background-color: #007AFF;
+}
+
+header #burgercontent .burger,
 header #burgercontent .burger:after,
-.burger:before {
+header #burgercontent .burger:before {
     content: '';
-    position: absolute;
-    background-color: #1D1D1B;
-    transition: 0.3s;
     border-radius: 1px;
-
     height: 1.5px;
+    position: absolute;
+    background-color: #1d1d1b;
 }
 
 /* burger open  */
@@ -101,38 +69,9 @@ header #burgercontent .burger.open:after {
 }
 
 header #burgercontent .burger.open:after,
-.burger.open:before {
+header #burgercontent .burger.open:before {
     width: 20px;
     height: 1.5px;
-}
-
-/* Burger animation */
-header #burgercontent:hover {
-    background-color: #FFF;
-}
-
-header #burgercontent .burger.animation {
-    width: 1px;
-    top: 50%;
-    left: 7.5px;
-}
-
-header #burgercontent .burger.animation:before {
-    top: -3.5px;
-    left: 1px;
-    transform: rotate(46.97deg);
-}
-
-header #burgercontent .burger.animation:after {
-    top: 3.5px;
-    left: 1px;
-    transform: rotate(-46.97deg);
-}
-
-header #burgercontent .burger.animation:after,
-.burger.animation:before {
-    width: 10.26px;
-    height: 1.5px
 }
 
 /* Burger Close */
@@ -143,18 +82,21 @@ header .burger.close,
     left: 7.5px;
 }
 
+header #burgercontent .burger.close:after,
 header #burgercontent .burger.close:before,
-.burger.closeclick::before {
+header #burgercontent .burger.closeclick::before {
     width: 20.52px;
     top: 0px;
     left: 0;
+}
+
+header #burgercontent .burger.close:before,
+.burger.closeclick::before {
     transform: rotate(46.97deg);
 }
 
-header #burgercontent .burger.close:after {
-    width: 20.52px;
-    left: 0;
-    top: 0px;
+header #burgercontent .burger.close:after,
+header #burgercontent .burger.closeclick:after {
     transform: rotate(-46.97deg);
 }
 
@@ -162,18 +104,39 @@ header #burgercontent .burger.closeclick:after {
     width: 10.52px;
     left: 1px;
     top: 3.5px;
-    transform: rotate(-46.97deg);
-}
-@media only screen and (max-width: 950px) {
-    header {
-        margin-left: 20px;
-        width: calc(100% - 40px);
-    }
-    
 }
 
-@media only screen and (max-width: 530px) {
+header nav {
+    z-index: 9;
+    position: absolute;
+    width: 400px;
+    height: 100vh;
+    background-color: white;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px 0px;
+}
+
+header nav.close {
+    transform: translateY(100%);
+}
+
+header nav.open {
+    transform: translateY(0%);
+}
+
+header nav a {
+    font-weight: 500;
+    font-size: 1.5rem;
+
+}
+
+@media only screen and (max-width: 600px) {
     header nav {
-        width: Calc(100% + 100px) !important;
+        width: 100%;
     }
 }
