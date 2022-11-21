@@ -22,6 +22,10 @@ p {
     font-family: neue-haas-grotesk-text, sans-serif;
 }
 
+h1, h2, h3{
+    text-transform: uppercase;
+}
+
 a {
     text-decoration: none;
     color: #1d1d1b;
@@ -34,4 +38,10 @@ a:hover {
 
 a:active {
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
 }
