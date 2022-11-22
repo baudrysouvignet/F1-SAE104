@@ -1,0 +1,139 @@
+section {
+    float: left;
+    height: Calc(100vh - 200px);
+    min-height: 580px;
+    margin-top: 130px;
+}
+
+section,
+section article {
+    width: 100%;
+}
+
+section:not(:first-child) {
+    margin-top: 500px;
+}
+
+section article {
+    overflow-x: hidden;
+
+}
+
+section,
+section article, section.carroussel article .content {
+    transition: 0.6s;
+}
+
+/* carroussel */
+section.carroussel .switch {
+    width: fit-content;
+    height: 24px;
+    margin: 20px auto;
+}
+
+section.carroussel .switch p {
+    margin: 0 30px;
+}
+
+section.carroussel .switch input {
+    border-radius: 100%;
+}
+
+section.carroussel .switch #back {
+    visibility:collapse;
+    transform: rotate(180deg);
+}
+
+section.carroussel article .content .feuille,
+.switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.carroussel article {
+    height: 90%;
+}
+
+section.carroussel article .content .feuille picture,
+section.carroussel article .content .feuille picture img,
+section.carroussel article .content .feuille,
+section.carroussel article .content {
+    height: 100%;
+}
+
+section.carroussel article .content {
+    margin-right: 100%;
+    width: 500%;
+    display: flex;
+    flex-direction: row;
+}
+
+section.carroussel article .content .feuille {
+    width: 100vw;
+}
+
+section.carroussel article .content .feuille .text {
+    width: calc(50% - 150px);
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px 0;
+}
+
+section.carroussel article .content .feuille .text h2 {
+    font-size: 3rem;
+}
+
+section.carroussel article .content .feuille picture {
+    width: 50%;
+}
+
+section.carroussel article .content .feuille picture img {
+    width: 100%;
+    object-fit: cover;
+}
+
+section.carroussel article .content .feuille picture {
+    overflow: hidden;
+    border-radius: 0 50vh 50vh 0;
+}
+
+@media only screen and (max-width: 1100px) {
+    section.carroussel article .content .feuille {
+        flex-direction: column;
+    }
+
+    section.carroussel article .content .feuille picture {
+        width: 90%;
+        margin-right: 10%;
+    }
+
+    section.carroussel article .content .feuille .text {
+        width: calc(100% - 100px);
+        height: fit-content;
+        gap: 20px 0;
+        margin-right: 50px;
+        justify-content: start;
+    }
+
+    section.carroussel article .content .feuille .text h2 {
+        font-size: 2rem;
+    }
+
+    section.carroussel article .content .feuille picture {
+        height: calc(100% - 300px);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    section {
+        margin-top: 80px;
+    }
+
+    section.carroussel article .content .feuille .text {
+        width: calc(100% - 40px);
+        margin-right: 20px;
+    }
+}

@@ -5,12 +5,16 @@
 
 body {
     background-color: #F3F3F3;
-    overflow-x: hidden;
 }
 
 html {
     font-size: 20px;
     scroll-behavior: smooth;
+}
+
+main {
+    width: 100%;
+    overflow-y: hidden;
 }
 
 h1,
@@ -22,26 +26,48 @@ p {
     font-family: neue-haas-grotesk-text, sans-serif;
 }
 
-h1, h2, h3{
+h1,
+h2,
+h3 {
     text-transform: uppercase;
 }
 
+h1 {
+    font-size: 0.75rem;
+    font-weight: 300;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+h3 {
+    font-weight: 300;
+}
+a, input{
+    transition: 0.3s;
+}
 a {
     text-decoration: none;
     color: #1d1d1b;
-    transition: 0.3s;
+    font-weight: 500;
 }
 
-a:hover {
-    color: #007AFF;
+a:not(.aimg):hover, input:hover {
+    background-color: #D9EBFF;
 }
 
-a:active {
-    text-decoration: underline;
+a:not(.aimg):active, input:active {
+    background-color: #007AFF;
+    color: white;
 }
 
 @media only screen and (max-width: 600px) {
     html {
         font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1rem;
     }
 }

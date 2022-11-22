@@ -6,10 +6,7 @@ header {
     justify-content: space-between;
     align-items: center;
     position: fixed;
-}
-header h1{
-    font-size: 0.75rem;
-    font-weight: 300;
+    transition: 0.3s;
 }
 
 header nav,
@@ -27,21 +24,26 @@ header>a picture img {
     height: 35px;
 }
 
-header #burgercontent {
+header #burgercontent,
+header>a,
+header h1 {
     z-index: 10;
+}
+
+header #burgercontent {
     position: relative;
     float: right;
     width: 35px;
     height: 35px;
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 5px;
 }
 
 header #burgercontent:hover,
 header #burgercontent:active .burger,
 header #burgercontent:active .burger:after,
 header #burgercontent:active .burger:before {
-    background-color: white;
+    background-color: #D9EBFF;
 }
 
 header #burgercontent:active {
@@ -124,18 +126,14 @@ header nav {
     justify-content: center;
     align-items: center;
     gap: 50px 0px;
+    transform: translateY(0%);
 }
 
 header nav.close {
     transform: translateY(100%);
 }
 
-header nav.open {
-    transform: translateY(0%);
-}
-
 header nav a {
-    font-weight: 500;
     font-size: 1.5rem;
 
 }
@@ -145,12 +143,10 @@ header nav a {
         width: calc(100% - 40px);
         margin: 20px;
     }
+
     header nav {
         width: 100vw;
         right: -20px;
         top: -20px;
-    }
-    header h1{
-        font-size: 1rem;
     }
 }
