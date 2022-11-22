@@ -1,15 +1,17 @@
 let carroussel = document.getElementById('contentCarr')
 let timer = Date.now()
+let switchback = document.getElementById('back')
+let switchnext = document.getElementById('next')
 carroussel.style.marginLeft = "0%"
 
 function switchvisibility() {
     if (carroussel.style.marginLeft == "calc(0%)") {
-        document.getElementById('back').style.visibility = "collapse";
+        switchback.style.visibility = "collapse";
     } else if (carroussel.style.marginLeft == "calc(-500%)") {
-        document.getElementById('next').style.visibility = "collapse";
+        switchnext.style.visibility = "collapse";
     } else {
-        document.getElementById('back').style.visibility = "initial";
-        document.getElementById('next').style.visibility = "initial";
+        switchback.style.visibility = "initial";
+        switchnext.style.visibility = "initial";
     }
 }
 
