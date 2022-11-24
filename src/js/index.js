@@ -7,7 +7,7 @@ carroussel.style.marginLeft = "0%"
 function switchvisibility() {
     if (carroussel.style.marginLeft == "calc(0%)") {
         switchback.style.visibility = "collapse";
-    } else if (carroussel.style.marginLeft == "calc(-500%)") {
+    } else if (carroussel.style.marginLeft == "calc(-400%)") {
         switchnext.style.visibility = "collapse";
     } else {
         switchback.style.visibility = "initial";

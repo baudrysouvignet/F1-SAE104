@@ -16,64 +16,76 @@ section:not(:first-child) {
 
 section article {
     overflow-x: hidden;
+}
 
+section:nth-child(0n+2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 section,
-section article, section.carroussel article .content {
+section article,
+section:nth-child(0n+2) article > #contentCarr {
     transition: 0.6s;
 }
 
 /* carroussel */
-section.carroussel .switch {
+section:nth-child(0n+2) .switch,
+section:nth-child(0n+2) h1 {
     width: fit-content;
-    height: 24px;
-    margin: 20px auto;
+    height: fit-content;
+    margin: 0 auto;
 }
 
-section.carroussel .switch p {
-    margin: 0 30px;
+section:nth-child(0n+2) h1 {
+    margin-top: -25px;
 }
 
-section.carroussel .switch input {
+section:nth-child(0n+2) .switch {
+    margin-top: 10px;
+}
+
+section:nth-child(0n+2) .switch input {
+    width: fit-content;
     border-radius: 100%;
 }
 
-section.carroussel .switch #back {
-    visibility:collapse;
+section:nth-child(0n+2) .switch #back {
+    visibility: collapse;
+    margin-right: 150px;
     transform: rotate(180deg);
 }
 
-section.carroussel article .content .feuille,
-.switch {
+section:nth-child(0n+2) article > #contentCarr > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-section.carroussel article {
+section:nth-child(0n+2) article {
     height: 90%;
 }
 
-section.carroussel article .content .feuille picture,
-section.carroussel article .content .feuille picture img,
-section.carroussel article .content .feuille,
-section.carroussel article .content {
+section:nth-child(0n+2) article > #contentCarr > div picture,
+section:nth-child(0n+2) article > #contentCarr > div picture img,
+section:nth-child(0n+2) article > #contentCarr > div,
+section:nth-child(0n+2) article > #contentCarr {
     height: 100%;
 }
 
-section.carroussel article .content {
+section:nth-child(0n+2) article > #contentCarr {
     margin-right: 100%;
     width: 500%;
     display: flex;
     flex-direction: row;
 }
 
-section.carroussel article .content .feuille {
+section:nth-child(0n+2) article > #contentCarr > div {
     width: 100vw;
 }
 
-section.carroussel article .content .feuille .text {
+section:nth-child(0n+2) article > #contentCarr > div > div {
     width: calc(50% - 150px);
     margin-right: 50px;
     display: flex;
@@ -82,35 +94,35 @@ section.carroussel article .content .feuille .text {
     gap: 50px 0;
 }
 
-section.carroussel article .content .feuille .text h2 {
+section:nth-child(0n+2) article > #contentCarr > div > div h2 {
     font-size: 3rem;
 }
 
-section.carroussel article .content .feuille picture {
+section:nth-child(0n+2) article > #contentCarr > div picture {
     width: 50%;
 }
 
-section.carroussel article .content .feuille picture img {
+section:nth-child(0n+2) article > #contentCarr > div picture img {
     width: 100%;
     object-fit: cover;
 }
 
-section.carroussel article .content .feuille picture {
+section:nth-child(0n+2) article > #contentCarr > div picture {
     overflow: hidden;
     border-radius: 0 50vh 50vh 0;
 }
 
 @media only screen and (max-width: 1300px) {
-    section.carroussel article .content .feuille {
+    section:nth-child(0n+2) article > #contentCarr > div {
         flex-direction: column;
     }
 
-    section.carroussel article .content .feuille picture {
+    section:nth-child(0n+2) article > #contentCarr > div picture {
         width: 90%;
         margin-right: 10%;
     }
 
-    section.carroussel article .content .feuille .text {
+    section:nth-child(0n+2) article > #contentCarr > div > div {
         width: calc(100% - 100px);
         height: 300px;
         gap: 20px 0;
@@ -118,11 +130,11 @@ section.carroussel article .content .feuille picture {
         justify-content: center;
     }
 
-    section.carroussel article .content .feuille .text h2 {
+    section:nth-child(0n+2) article > #contentCarr > div > div h2 {
         font-size: 2rem;
     }
 
-    section.carroussel article .content .feuille picture {
+    section:nth-child(0n+2) article > #contentCarr > div picture {
         height: calc(100% - 300px);
     }
 }
@@ -132,7 +144,7 @@ section.carroussel article .content .feuille picture {
         margin-top: 80px;
     }
 
-    section.carroussel article .content .feuille .text {
+    section:nth-child(0n+2) article > #contentCarr > div > div {
         width: calc(100% - 40px);
         margin-right: 20px;
         justify-content: center;

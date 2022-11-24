@@ -53,11 +53,11 @@ a {
     font-weight: 500;
 }
 
-a:not(.aimg):hover, input:hover {
+a:not(.a_img):hover, input:hover {
     background-color: #D9EBFF;
 }
 
-a:not(.aimg):active, input:active {
+a:not(.a_img):active, input:active {
     background-color: #007AFF;
     color: white;
 }
