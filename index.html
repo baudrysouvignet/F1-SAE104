@@ -2,149 +2,193 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="author" content="Souvignet Baudry">
-    <meta name="description" content="Bienvenue sur le site dédié a la formule 1.">
-    <meta name="keywords"
-        content="F1, formule1, voiture, course, motogp, ferrari, red-bull, Hamilton, Mercedes, FIA, FFSA">
+  <meta name="author" content="Souvignet Baudry" />
+  <meta name="description" content="Bienvenue sur le site dédié a la formule 1." />
+  <meta name="keywords"
+    content="F1, formule1, voiture, course, motogp, ferrari, red-bull, Hamilton, Mercedes, FIA, FFSA" />
 
-    <link rel="icon" type="image/x-icon" href="src/asset/LogoResponsive.ico">
+  <link rel="icon" type="image/x-icon" href="src/asset/LogoResponsive.ico" />
 
-    <link rel="stylesheet" href="src/css/global.css">
-    <link rel="stylesheet" href="src/css/header.css">
-    <link rel="stylesheet" href="src/css/index.css">
+  <link rel="stylesheet" href="src/css/global.css" />
+  <link rel="stylesheet" href="src/css/header.css" />
+  <link rel="stylesheet" href="src/css/index.css" />
 
-    <title>BaudryPassion</title>
+  <title>BaudryPassion</title>
 
-    <link rel="stylesheet" href="https://use.typekit.net/tqh7gvy.css">
+  <link rel="stylesheet" href="https://use.typekit.net/tqh7gvy.css" />
 </head>
 
 <body>
-    <header>
-        <a class="a_img" href="#">
+  <header>
+    <a class="a_img" href="#">
+      <picture>
+        <source media="(max-width: 600px)" srcset="src/asset/LogoResponsive.webp 80w" sizes="35px" />
+        <!-- changement d'image responsive -->
+        <img src="src/asset/Logo.webp" alt="Logo de la marque baudryPassion " />
+      </picture>
+    </a>
+
+    <h1>La FORMULE 1 en 2022</h1>
+
+    <div id="burgercontent" onclick="burgerclick()">
+      <div class="burger open" id="burger"></div>
+    </div>
+
+    <nav class="close" id="navheader">
+      <a href="#">Accueil</a>
+      <a href="">Titre a choisir</a>
+      <a href="">F1 et scandale</a>
+      <a href="">Voter</a>
+    </nav>
+  </header>
+
+  <main>
+    <section></section>
+
+    <section>
+      <!-- section 2 avec le carroussel -->
+      <article>
+        <div id="contentCarr">
+          <div>
+            <!-- premiére page du carroussel -->
             <picture>
-                <source media="(max-width: 600px)" srcset="src/asset/LogoResponsive.webp 80w" sizes="35px">
-                <!-- changement d'image responsive -->
-                <img src="src/asset/Logo.webp" alt="Logo de la marque baudryPassion ">
+              <img src="src/img//carroussel/charleleclerc.png"
+                alt="Image des deux voitures des pilotes ferrari en batail sur la piste" />
             </picture>
-        </a>
-
-        <h1>La FORMULE 1 en 2022</h1>
-
-        <div id="burgercontent" onclick="burgerclick()">
-            <div class="burger open" id="burger"></div>
-        </div>
-
-        <nav class="close" id="navheader">
-            <a href="#">Accueil</a>
-            <a href="">Titre a choisir</a>
-            <a href="">F1 et scandale</a>
-            <a href="">Voter</a>
-        </nav>
-    </header>
-
-    <main>
-        <section></section>
-        <section>
-            <article>
-                <div id="contentCarr">
-                    <div>
-                        <picture>
-                            <img src="src/img//carroussel/charleleclerc.png"
-                                alt="Image des deux voitures des pilotes ferrari en batail sur la piste">
-                        </picture>
-                        <div>
-                            <h2>Mais la F1, c’est quoi?</h2>
-                            <p>La formule 1 est un sport mécanique, entre vitesse, stratégie, et sportivité, la F1 est
-                                la catégorie reine du sport automobile. Elle est découpée en saison qui se déroule
-                                chaque
-                                année. Une saison se déroule en plusieurs week-end, 23 son prévu en 2023. Chaque
-                                week-ends se déroulent en trois parties que vous découvrirez dans la suite de ce
-                                carroussel.
-                                En bref la Formule 1 c’est 20 pilotes 11 écuries et 1 seul gagnant. </p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <picture>
-                            <img src="src/img/carroussel/elibre.avif"
-                                alt="Image des deux voitures des pilotes ferrari en batail sur la piste">
-                        </picture>
-                        <div>
-                            <h2>Les essaies libres</h2>
-                            <p>Aprés les essaies libres prend place les qulifications,sans doute le moment le plus
-                                important du week-end. l’objectif réaliser le meilleur tour chronométré. Les
-                                qualifications se déroulent en 3 temps, une première partie avec les 20 pilotes en lice,
-                                une deuxième partie ou les cinq moins bon sont éliminés et une troisième partie avec
-                                uniquement les 10 meilleurs. Le meilleur temps de chaque pilote permet de définir la
-                                grille de départ pour le grand-prix de dimanche. </p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <picture>
-                            <img src="src/img/carroussel/grille.webp"
-                                alt="Image des 20 pilotes quelques seconde aprés le départ">
-                        </picture>
-                        <div>
-                            <h2>Les qualifications</h2>
-                            <p>Aprés les essaies libres prend place les qulifications,sans doute le moment le plus
-                                important du week-end. l’objectif réaliser le meilleur tour chronométré. Les
-                                qualifications se déroulent en 3 temps, une première partie avec les 20 pilotes en lice,
-                                une deuxième partie ou les cinq moins bon sont éliminés et une troisième partie avec
-                                uniquement les 10 meilleurs. Le meilleur temps de chaque pilote permet de définir la
-                                grille de départ pour le grand-prix de dimanche. </p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <picture>
-                            <img src="src/img/carroussel/victoire.webp"
-                                alt="Image des 20 pilotes quelques seconde aprés le départ">
-                        </picture>
-                        <div>
-                            <h2>La course</h2>
-                            <p>Aprés les essaies libres prend place les qulifications,sans doute le moment le plus
-                                important du week-end. l’objectif réaliser le meilleur tour chronométré. Les
-                                qualifications se déroulent en 3 temps, une première partie avec les 20 pilotes en lice,
-                                une deuxième partie ou les cinq moins bon sont éliminés et une troisième partie avec
-                                uniquement les 10 meilleurs. Le meilleur temps de chaque pilote permet de définir la
-                                grille de départ pour le grand-prix de dimanche. </p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <picture>
-                            <img src="src/img/carroussel/strategie.jpeg"
-                                alt="Image des 20 pilotes quelques seconde aprés le départ">
-                        </picture>
-                        <div>
-                            <h2>La stratégie</h2>
-                            <p>Aprés les essaies libres prend place les qulifications,sans doute le moment le plus
-                                important du week-end. l’objectif réaliser le meilleur tour chronométré. Les
-                                qualifications se déroulent en 3 temps, une première partie avec les 20 pilotes en lice,
-                                une deuxième partie ou les cinq moins bon sont éliminés et une troisième partie avec
-                                uniquement les 10 meilleurs. Le meilleur temps de chaque pilote permet de définir la
-                                grille de départ pour le grand-prix de dimanche. </p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <div class="switch">
-                <input onclick="switchcar('back')" type="image" id="back" alt="fléche de navigation retour en arriére"
-                    src="src/asset/switch.svg">
-                <input onclick="switchcar('next')" type="image" id="next" alt="fléche de navigation aller en avant"
-                    src="src/asset/switch.svg">
+            <div>
+              <h3>Mais la F1, c’est quoi?</h3>
+              <p>
+                La formule 1 est un sport mécanique, entre vitesse, stratégie,
+                et sportivité, la F1 est la catégorie reine du sport
+                automobile. Elle est découpée en saison qui se déroule chaque
+                année. Une saison se déroule en plusieurs week-end, 23 son
+                prévu en 2023. Chaque week-ends se déroulent en trois parties
+                que vous découvrirez dans la suite de ce carroussel. En bref
+                la Formule 1 c’est 20 pilotes 11 écuries et 1 seul gagnant.
+              </p>
             </div>
-            <h1>Les bases de la F1</h1>
-        </section>
-    </main>
+          </div>
 
-    <script src="src/js/index.js"></script>
-    <script src="src/js/header.js"></script>
+          <div>
+            <!-- deuxiéme page du carroussel -->
+            <picture>
+              <img src="src/img/carroussel/elibre.avif"
+                alt="Image des deux voitures des pilotes ferrari en batail sur la piste" />
+            </picture>
+            <div>
+              <h3>Les essaies libres</h3>
+              <p>
+                Aprés les essaies libres prend place les qulifications,sans
+                doute le moment le plus important du week-end. l’objectif
+                réaliser le meilleur tour chronométré. Les qualifications se
+                déroulent en 3 temps, une première partie avec les 20 pilotes
+                en lice, une deuxième partie ou les cinq moins bon sont
+                éliminés et une troisième partie avec uniquement les 10
+                meilleurs. Le meilleur temps de chaque pilote permet de
+                définir la grille de départ pour le grand-prix de dimanche.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <!-- troisiéme page du carroussel -->
+            <picture>
+              <img src="src/img/carroussel/grille.webp" alt="Image des 20 pilotes quelques seconde aprés le départ" />
+            </picture>
+            <div>
+              <h3>Les qualifications</h3>
+              <p>
+                Aprés les essaies libres prend place les qulifications,sans
+                doute le moment le plus important du week-end. l’objectif
+                réaliser le meilleur tour chronométré. Les qualifications se
+                déroulent en 3 temps, une première partie avec les 20 pilotes
+                en lice, une deuxième partie ou les cinq moins bon sont
+                éliminés et une troisième partie avec uniquement les 10
+                meilleurs. Le meilleur temps de chaque pilote permet de
+                définir la grille de départ pour le grand-prix de dimanche.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <!-- cinquiéme page du carroussel -->
+            <picture>
+              <img src="src/img/carroussel/victoire.webp" alt="Image des 20 pilotes quelques seconde aprés le départ" />
+            </picture>
+            <div>
+              <h3>La course</h3>
+              <p>
+                Aprés les essaies libres prend place les qulifications,sans
+                doute le moment le plus important du week-end. l’objectif
+                réaliser le meilleur tour chronométré. Les qualifications se
+                déroulent en 3 temps, une première partie avec les 20 pilotes
+                en lice, une deuxième partie ou les cinq moins bon sont
+                éliminés et une troisième partie avec uniquement les 10
+                meilleurs. Le meilleur temps de chaque pilote permet de
+                définir la grille de départ pour le grand-prix de dimanche.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <!-- sixiéme page du carroussel -->
+            <picture>
+              <img src="src/img/carroussel/strategie.jpeg"
+                alt="Image des 20 pilotes quelques seconde aprés le départ" />
+            </picture>
+            <div>
+              <h3>La stratégie</h3>
+              <p>
+                Aprés les essaies libres prend place les qulifications,sans
+                doute le moment le plus important du week-end. l’objectif
+                réaliser le meilleur tour chronométré. Les qualifications se
+                déroulent en 3 temps, une première partie avec les 20 pilotes
+                en lice, une deuxième partie ou les cinq moins bon sont
+                éliminés et une troisième partie avec uniquement les 10
+                meilleurs. Le meilleur temps de chaque pilote permet de
+                définir la grille de départ pour le grand-prix de dimanche.
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="switch">
+        <input onclick="switchcar('back')" type="image" id="back" alt="fléche de navigation retour en arriére"
+          src="src/asset/switch.svg" />
+        <input onclick="switchcar('next')" type="image" id="next" alt="fléche de navigation aller en avant"
+          src="src/asset/switch.svg" />
+      </div>
+      <h2>Les bases de la F1</h2>
+    </section>
+
+    <section>
+      <article>
+        <h3>F1 et scandales </h3>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+          dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+          amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
+          aliquam quaerat voluptatem. </p>
+          <button>Découvrir les articles</button>
+      </article>
+      <article>
+        <img src="src/img/carroussel/charleleclerc.png" alt="" srcset="">
+        <img src="src/img/carroussel/elibre.avif" alt="" srcset="">
+        <img src="src/img/carroussel/victoire.webp" alt="" srcset="">
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    
+  </footer>
+  <script src="src/js/index.js"></script>
+  <script src="src/js/header.js"></script>
 </body>
 
 </html>

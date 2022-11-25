@@ -1,152 +1,268 @@
+/* ---------------------------------------------------------------- */
+/* melange 3 sections */
+/* ---------------------------------------------------------------- */
+section:nth-child(0n + 2) article > #contentCarr > div,
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 section {
-    float: left;
-    height: Calc(100vh - 200px);
-    min-height: 580px;
-    margin-top: 130px;
+  float: left;
+  height: Calc(100vh - 200px);
+  min-height: 580px;
+  margin-top: 130px;
 }
 
 section,
 section article {
-    width: 100%;
+  width: 100%;
 }
 
 section:not(:first-child) {
-    margin-top: 500px;
+  margin-top: 300px;
 }
 
 section article {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
-section:nth-child(0n+2) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+section:not(:first-child) {
+  /* display flex les sections */
+  display: flex;
+  justify-content: center;
+}
+
+section:nth-child(0n + 2) article > #contentCarr > div > div,
+section:last-child article:first-child,
+header nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 section,
 section article,
-section:nth-child(0n+2) article > #contentCarr {
-    transition: 0.6s;
+section:nth-child(0n + 2) article > #contentCarr,
+section:last-child article:last-child img,
+header nav,
+header #burgercontent,
+header #burgercontent .burger:after,
+header #burgercontent .burger:before {
+  transition: 0.7s;
+}
+/* ---------------------------------------------------------------- */
+/* scandale */
+/* ---------------------------------------------------------------- */
+section:last-child article:first-child {
+  gap: 50px;
+  height: 100%;
+  width: 600px;
+}
+section:last-child article:last-child {
+  width: calc(100% - 600px);
+}
+section:last-child article:first-child h3,
+section:last-child article:first-child p {
+  width: 450px;
+}
+section:last-child article:first-child h3,
+section:last-child article:first-child p,
+section:last-child article:first-child button {
+  margin-left: 100px;
+}
+section:last-child article:last-child {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+section:last-child article:last-child img {
+  position: relative;
+  z-index: 1;
+  height: 80%;
+  width: 25%;
+  object-fit: cover;
+  border-radius: 200px;
+  filter: grayscale(1);
+}
+section:last-child article:last-child img:last-child {
+  margin-right: 50px;
+}
+
+section:last-child article:last-child img:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+/* ---------------------------------------------------------------- */
+/* carroussele */
+/* ---------------------------------------------------------------- */
+section:nth-child(0n + 2) {
+  flex-direction: column;
 }
 
 /* carroussel */
-section:nth-child(0n+2) .switch,
-section:nth-child(0n+2) h1 {
-    width: fit-content;
-    height: fit-content;
-    margin: 0 auto;
+section:nth-child(0n + 2) .switch,
+section:nth-child(0n + 2) h2 {
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
 }
 
-section:nth-child(0n+2) h1 {
-    margin-top: -25px;
+section:nth-child(0n + 2) h2 {
+  margin-top: -25px;
 }
 
-section:nth-child(0n+2) .switch {
-    margin-top: 10px;
+section:nth-child(0n + 2) .switch {
+  margin-top: 10px;
 }
 
-section:nth-child(0n+2) .switch input {
-    width: fit-content;
-    border-radius: 100%;
+section:nth-child(0n + 2) .switch input {
+  width: fit-content;
+  border-radius: 100%;
 }
 
-section:nth-child(0n+2) .switch #back {
-    visibility: collapse;
-    margin-right: 150px;
-    transform: rotate(180deg);
+section:nth-child(0n + 2) .switch #back {
+  visibility: collapse;
+  margin-right: 180px;
+  transform: rotate(180deg);
 }
 
-section:nth-child(0n+2) article > #contentCarr > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+section:nth-child(0n + 2) article > #contentCarr > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-section:nth-child(0n+2) article {
-    height: 90%;
+section:nth-child(0n + 2) article {
+  height: 90%;
 }
 
-section:nth-child(0n+2) article > #contentCarr > div picture,
-section:nth-child(0n+2) article > #contentCarr > div picture img,
-section:nth-child(0n+2) article > #contentCarr > div,
-section:nth-child(0n+2) article > #contentCarr {
-    height: 100%;
+section:nth-child(0n + 2) article > #contentCarr > div picture,
+section:nth-child(0n + 2) article > #contentCarr > div picture img,
+section:nth-child(0n + 2) article > #contentCarr > div,
+section:nth-child(0n + 2) article > #contentCarr {
+  height: 100%;
 }
 
-section:nth-child(0n+2) article > #contentCarr {
-    margin-right: 100%;
-    width: 500%;
-    display: flex;
-    flex-direction: row;
+section:nth-child(0n + 2) article > #contentCarr {
+  margin-right: 100%;
+  width: 500%;
+  display: flex;
+  flex-direction: row;
 }
 
-section:nth-child(0n+2) article > #contentCarr > div {
-    width: 100vw;
+section:nth-child(0n + 2) article > #contentCarr > div {
+  width: 100vw;
 }
 
-section:nth-child(0n+2) article > #contentCarr > div > div {
-    width: calc(50% - 150px);
-    margin-right: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 50px 0;
+section:nth-child(0n + 2) article > #contentCarr > div > div {
+  width: calc(50% - 150px);
+  margin-right: 50px;
+  gap: 50px 0;
 }
 
-section:nth-child(0n+2) article > #contentCarr > div > div h2 {
-    font-size: 3rem;
+section:nth-child(0n + 2) article > #contentCarr > div > div h3,
+section:last-child article:first-child h3 {
+  /* modifie le titre des carrouselle et de la derniére partie de la page */
+  font-size: 3rem;
 }
 
-section:nth-child(0n+2) article > #contentCarr > div picture {
-    width: 50%;
+section:nth-child(0n + 2) article > #contentCarr > div picture {
+  width: 50%;
 }
 
-section:nth-child(0n+2) article > #contentCarr > div picture img {
-    width: 100%;
-    object-fit: cover;
+section:nth-child(0n + 2) article > #contentCarr > div picture img {
+  width: 100%;
+  object-fit: cover;
 }
 
-section:nth-child(0n+2) article > #contentCarr > div picture {
-    overflow: hidden;
-    border-radius: 0 50vh 50vh 0;
+section:nth-child(0n + 2) article > #contentCarr > div picture {
+  overflow: hidden;
+  border-radius: 0 50vh 50vh 0;
 }
 
 @media only screen and (max-width: 1300px) {
-    section:nth-child(0n+2) article > #contentCarr > div {
-        flex-direction: column;
-    }
+  section:nth-child(0n + 2) article > #contentCarr > div {
+    flex-direction: column;
+  }
 
-    section:nth-child(0n+2) article > #contentCarr > div picture {
-        width: 90%;
-        margin-right: 10%;
-    }
+  section:nth-child(0n + 2) article > #contentCarr > div picture {
+    width: 90%;
+    margin-right: 10%;
+  }
 
-    section:nth-child(0n+2) article > #contentCarr > div > div {
-        width: calc(100% - 100px);
-        height: 300px;
-        gap: 20px 0;
-        margin-right: 50px;
-        justify-content: center;
-    }
+  section:nth-child(0n + 2) article > #contentCarr > div > div {
+    width: calc(100% - 100px);
+    height: 300px;
+    gap: 20px 0;
+    margin-right: 50px;
+    justify-content: center;
+  }
 
-    section:nth-child(0n+2) article > #contentCarr > div > div h2 {
-        font-size: 2rem;
-    }
+  section:nth-child(0n + 2) article > #contentCarr > div > div h3,
+  section:last-child article:first-child h3 {
+    font-size: 2rem;
+  }
 
-    section:nth-child(0n+2) article > #contentCarr > div picture {
-        height: calc(100% - 300px);
-    }
+  section:nth-child(0n + 2) article > #contentCarr > div picture {
+    height: calc(100% - 300px);
+  }
+}
+@media only screen and (max-width: 1250px) {
+  section:last-child {
+    flex-direction: column-reverse;
+    height: Calc(100vh - 100px);
+  }
+  section:last-child article:first-child h3,
+  section:last-child article:first-child p,
+  section:last-child article:first-child button {
+    width: 100%;
+    margin-left: 0px;
+  }
+  section:last-child article:first-child {
+    gap: 30px;
+    height: fit-content;
+  }
+  section:last-child article:first-child,
+  section:last-child article:last-child {
+    width: calc(100% - 100px);
+    margin-left: 50px;
+  }
+  section:last-child article:last-child {
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+  section:last-child article:last-child img {
+    max-width: 250px;
+  }
+  section:last-child article:last-child img:last-child {
+    margin-right: 0px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-    section {
-        margin-top: 80px;
-    }
-
-    section:nth-child(0n+2) article > #contentCarr > div > div {
-        width: calc(100% - 40px);
-        margin-right: 20px;
-        justify-content: center;
-    }
+  section {
+    margin-top: 80px;
+  }
+  section:not(:first-child) {
+    margin-top: 300px;
+  }
+  section:nth-child(0n + 2) article > #contentCarr > div > div {
+    width: calc(100% - 40px);
+    margin-right: 20px;
+    justify-content: center;
+  }
+  section:last-child article:last-child {
+    width: 100%;
+    margin-left: 0;
+  }
+  section:last-child article:first-child {
+    width: calc(100% - 40px);
+    margin: 0 20px;
+  }
+  section:nth-child(0n + 2) .switch #back {
+    margin-right: 150px;
+  }
 }
