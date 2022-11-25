@@ -10,13 +10,15 @@ header {
 
 section {
   float: left;
-  height: Calc(100vh - 200px);
   min-height: 580px;
   margin-top: 130px;
 }
 
 section,
-section article {
+section article,
+section:first-child article:last-child img,
+section:nth-child(0n + 2) article > #contentCarr > div picture img,
+section:first-child article:last-child div {
   width: 100%;
 }
 
@@ -29,7 +31,7 @@ section article {
 }
 
 section:not(:first-child) {
-  /* display flex les sections */
+  height: Calc(100vh - 200px);
   display: flex;
   justify-content: center;
 }
@@ -43,14 +45,77 @@ header nav {
 }
 
 section,
-section article,
 section:nth-child(0n + 2) article > #contentCarr,
-section:last-child article:last-child img,
+section:last-child article:last-child img:hover,
 header nav,
 header #burgercontent,
 header #burgercontent .burger:after,
 header #burgercontent .burger:before {
   transition: 0.7s;
+}
+section:nth-child(0n + 2),
+section:first-child .contenu {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------------------------------------------------------------- */
+/* accueil */
+/* ---------------------------------------------------------------- */
+section:first-child {
+  height: Calc(100vh - 130px);
+  display: grid;
+  grid-template-columns: 545px 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+section:first-child h2,
+section:first-child h3 {
+  margin-left: 50px;
+  grid-column: 1;
+  grid-row: 1;
+  height: fit-content;
+}
+section:first-child h2 {
+  font-weight: 700;
+  font-size: 4.2rem;
+}
+section:first-child h3 {
+  margin-top: 95px;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+section:first-child article:last-child {
+  overflow: hidden;
+  position: relative;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+section:first-child article:last-child div {
+  position: absolute;
+  height: 280px;
+  background-color: #d7282876;
+  bottom: 90px;
+  border-radius: 157px 0px 0px 157px;
+}
+section:first-child article:last-child img {
+  object-position: top;
+  height: 100%;
+  margin: 0;
+
+  object-fit: cover;
+}
+section:first-child .contenu {
+  gap: 30px;
+  justify-content: end;
+  grid-column: 1;
+  grid-row: 2;
+}
+section:first-child .contenu button,
+section:first-child .contenu p {
+  margin-left: 50px;
+}
+section:first-child .contenu button {
+  margin-bottom: 50px;
 }
 /* ---------------------------------------------------------------- */
 /* scandale */
@@ -98,11 +163,7 @@ section:last-child article:last-child img:hover {
 /* ---------------------------------------------------------------- */
 /* carroussele */
 /* ---------------------------------------------------------------- */
-section:nth-child(0n + 2) {
-  flex-direction: column;
-}
 
-/* carroussel */
 section:nth-child(0n + 2) .switch,
 section:nth-child(0n + 2) h2 {
   width: fit-content;
@@ -174,7 +235,6 @@ section:nth-child(0n + 2) article > #contentCarr > div picture {
 }
 
 section:nth-child(0n + 2) article > #contentCarr > div picture img {
-  width: 100%;
   object-fit: cover;
 }
 
@@ -184,6 +244,38 @@ section:nth-child(0n + 2) article > #contentCarr > div picture {
 }
 
 @media only screen and (max-width: 1300px) {
+  /* adaptation de la premiére page */
+  section:first-child {
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 250px;
+  }
+  section:first-child .contenu {
+    gap: 20px;
+    grid-row: 3;
+  }
+  section:first-child .contenu p {
+    width: 50vw;
+  }
+  section:first-child .contenu button {
+    margin-bottom: 30px;
+  }
+  section:first-child article:last-child {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  section:first-child h2 {
+    font-size: 2rem;
+  }
+  section:first-child h3 {
+    font-size: 1rem;
+    margin-top: 50px;
+  }
+  section:first-child article:last-child div {
+    bottom: 20px;
+    border-radius: 157px 0px 0px 157px;
+  }
+
+  /* adaptation de la deuxiéme page */
   section:nth-child(0n + 2) article > #contentCarr > div {
     flex-direction: column;
   }
@@ -209,16 +301,17 @@ section:nth-child(0n + 2) article > #contentCarr > div picture {
   section:nth-child(0n + 2) article > #contentCarr > div picture {
     height: calc(100% - 300px);
   }
-}
-@media only screen and (max-width: 1250px) {
   section:last-child {
     flex-direction: column-reverse;
     height: Calc(100vh - 100px);
   }
   section:last-child article:first-child h3,
+  section:last-child article:first-child p {
+    width: 100%;
+  }
+  section:last-child article:first-child h3,
   section:last-child article:first-child p,
   section:last-child article:first-child button {
-    width: 100%;
     margin-left: 0px;
   }
   section:last-child article:first-child {
@@ -247,7 +340,7 @@ section:nth-child(0n + 2) article > #contentCarr > div picture {
     margin-top: 80px;
   }
   section:not(:first-child) {
-    margin-top: 300px;
+    margin-top: 200px;
   }
   section:nth-child(0n + 2) article > #contentCarr > div > div {
     width: calc(100% - 40px);
@@ -264,5 +357,29 @@ section:nth-child(0n + 2) article > #contentCarr > div picture {
   }
   section:nth-child(0n + 2) .switch #back {
     margin-right: 150px;
+  }
+
+  section:first-child {
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 1fr 180px;
+  }
+  section:first-child .contenu {
+    width: 100%;
+  }
+  section:first-child .contenu p,
+  section:first-child .contenu button,
+  section:first-child h2,
+  section:first-child h3 {
+    margin-left: 5%;
+    width: 90%;
+  }
+  section:first-child h3 {
+    display: none;
+  }
+  section:first-child h2 {
+    font-size: 4rem;
+  }
+  section:first-child article:last-child div {
+    height: 160px;
   }
 }

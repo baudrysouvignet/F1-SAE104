@@ -13,6 +13,8 @@ html {
 }
 
 main {
+  z-index: 1;
+  position: relative;
   width: 100%;
   overflow-y: hidden;
 }
@@ -21,9 +23,14 @@ h1,
 h2,
 h3,
 a,
-p {
+p,
+span {
   color: #1d1d1b;
   font-family: neue-haas-grotesk-text, sans-serif;
+}
+p,
+span {
+  font-size: 1rem;
 }
 
 h1,
@@ -47,6 +54,7 @@ button {
   transition: 0.3s;
 }
 a {
+  font-size: 1rem;
   text-decoration: none;
   color: #1d1d1b;
   font-weight: 500;
@@ -58,7 +66,8 @@ button:hover,
 header #burgercontent:hover,
 header #burgercontent:active .burger,
 header #burgercontent:active .burger:after,
-header #burgercontent:active .burger:before, #burgercontent:hover .burger.closeclick {
+header #burgercontent:active .burger:before,
+#burgercontent:hover .burger.closeclick {
   color: black;
   background-color: #d9ebff;
 }
@@ -66,7 +75,8 @@ header #burgercontent:active .burger:before, #burgercontent:hover .burger.closec
 a:not(.a_img):active,
 input:active,
 button:active,
-header #burgercontent:active, #burgercontent:active .burger.closeclick {
+header #burgercontent:active,
+#burgercontent:active .burger.closeclick {
   background-color: #007aff;
   color: white;
 }
