@@ -89,7 +89,10 @@ button {
   background-color: black;
   color: white;
 }
-
+em.strong{
+  font-style: normal;
+  font-weight: bold;
+}
 @media only screen and (max-width: 600px) {
   html {
     font-size: 14px;
