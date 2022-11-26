@@ -62,7 +62,7 @@ a {
 
 a:not(.a_img):hover,
 input:hover,
-button:hover,
+button:hover,input[type=submit]:hover, 
 header #burgercontent:hover,
 header #burgercontent:active .burger,
 header #burgercontent:active .burger:after,
@@ -74,14 +74,14 @@ header #burgercontent:active .burger:before,
 
 a:not(.a_img):active,
 input:active,
-button:active,
+button:active,input[type=submit]:active,
 header #burgercontent:active,
 #burgercontent:active .burger.closeclick {
   background-color: #007aff;
   color: white;
 }
 
-button {
+button, input[type=submit] {
   font-size: 1rem;
   padding: 15px 40px 15px 40px;
   width: fit-content;
