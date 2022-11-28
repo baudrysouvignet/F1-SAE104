@@ -1,6 +1,5 @@
-/* ---------------------------------------------------------------- */
-/* scandale */
-/* ---------------------------------------------------------------- */
+/* header */
+
 header {
   z-index: 3;
   width: calc(100% - 100px);
@@ -9,6 +8,7 @@ header {
   position: fixed;
   transition: 0.3s;
 }
+
 header > a,
 header > a picture,
 header > a picture img {
@@ -21,6 +21,7 @@ header > a,
 header h1 {
   z-index: 10;
 }
+
 header h1 {
   flex-grow: 1;
   text-align: center;
@@ -34,22 +35,24 @@ header #burgercontent {
   cursor: pointer;
   border-radius: 5px;
 }
+
 header #burgercontent:active {
   background-color: #007aff;
 }
 
 header #burgercontent .burger,
-header #burgercontent .burger:after,
-header #burgercontent .burger:before {
+header #burgercontent .burger::after,
+header #burgercontent .burger::before {
   content: "";
   border-radius: 1px;
   height: 1.5px;
   position: absolute;
   right: 0;
 }
+
 header #burgercontent .burger.open,
-header #burgercontent .burger:after,
-header #burgercontent .burger:before {
+header #burgercontent .burger::after,
+header #burgercontent .burger::before {
   background-color: #1d1d1b;
 }
 
@@ -58,16 +61,16 @@ header #burgercontent .burger.open {
   width: 20px;
 }
 
-header #burgercontent .burger.open:before {
+header #burgercontent .burger.open::before {
   top: -7.5px;
 }
 
-header #burgercontent .burger.open:after {
+header #burgercontent .burger.open::after {
   top: 7.5px;
 }
 
-header #burgercontent .burger.open:after,
-header #burgercontent .burger.open:before {
+header #burgercontent .burger.open::after,
+header #burgercontent .burger.open::before {
   width: 20px;
   height: 1.5px;
 }
@@ -80,25 +83,25 @@ header #burgercontent .burger.open {
   left: 7.5px;
 }
 
-header #burgercontent .burger.close:after,
-header #burgercontent .burger.close:before,
+header #burgercontent .burger.close::after,
+header #burgercontent .burger.close::before,
 header #burgercontent .burger.closeclick::before {
   width: 20.52px;
-  top: 0px;
+  top: 0;
   left: 0;
 }
 
-header #burgercontent .burger.close:before,
-.burger.closeclick::before {
+header #burgercontent .burger.close::before,
+.burger .closeclick::before {
   transform: rotate(46.97deg);
 }
 
-header #burgercontent .burger.close:after,
-header #burgercontent .burger.closeclick:after {
+header #burgercontent .burger.close::after,
+header #burgercontent .burger.closeclick::after {
   transform: rotate(-46.97deg);
 }
 
-header #burgercontent .burger.closeclick:after {
+header #burgercontent .burger.closeclick::after {
   width: 10.52px;
   top: 3.5px;
 }
@@ -112,7 +115,7 @@ header nav {
   right: -50px;
   top: -50px;
   align-items: center;
-  gap: 50px 0px;
+  gap: 50px 0;
   transform: translateY(0%);
 }
 
@@ -129,9 +132,11 @@ header nav a {
     width: calc(100% - 40px);
     margin: 20px;
   }
+
   header h1 {
-    padding-right: 0px;
+    padding-right: 0;
   }
+
   header nav {
     width: 100vw;
     right: -20px;
@@ -139,7 +144,7 @@ header nav a {
   }
 }
 
-footer{
+footer {
   width: 90%;
   height: fit-content;
   margin: 0 5%;
@@ -149,28 +154,35 @@ footer{
   flex-direction: column;
   gap: 30px;
 }
-footer>div{
+
+footer > div {
   display: flex;
   align-items: center;
 }
-footer>div a{
+
+footer > div a {
   font-weight: 300;
 }
-footer>div:first-child{
+
+footer > div:first-child {
   justify-content: left;
 }
-footer>div:last-child{
+
+footer > div:last-child {
   justify-content: center;
-  gap:10px  50px;
+  gap: 10px  50px;
   flex-wrap: wrap;
 }
-footer div:first-child a{
+
+footer div:first-child a {
   margin-left: 10px;
 }
-footer div:first-child a::before{
+
+footer div:first-child a::before {
   content: "> ";
 }
-footer div:first-child img{
+
+footer div:first-child img {
   width: 25px;
   height: 25px;
   margin-left: 10px;

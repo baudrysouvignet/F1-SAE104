@@ -46,7 +46,7 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section class="sectionvote">
             <h2>Quelle est le Pilote de l’année</h2>
             <form method="post" action="formok.php">
                 <div>
@@ -55,20 +55,20 @@
                     <p><input type="email" name="email" placeholder="mail@baudrypassion.fr"></p>
                 </div>
                 <div>
-                    <p><input type="radio" name="vote" value="Charles Leclerc" checked><label>Charles Leclerc</label>
+                    <p><input type="radio" name="vote" id="CL" value="Charles Leclerc" checked><label>Charles Leclerc</label>
                     </p>
-                    <p><input type="radio" name="vote" value="Max Verstapend"><label>Max Verstapend</label></p>
-                    <p><input type="radio" name="vote" value="George Russel"><label>George Russel</label></p>
-                    <p><input type="radio" name="vote" value="Sergio Perez"><label>Sergio Perez</label></p>
+                    <p><input type="radio" name="vote" id="MV" value="Max Verstapend"><label>Max Verstapend</label></p>
+                    <p><input type="radio" name="vote" id="GR" value="George Russel"><label>George Russel</label></p>
+                    <p><input type="radio" name="vote" id="SP" value="Sergio Perez"><label>Sergio Perez</label></p>
                 </div>
                 <input type="submit" value="Voter">
             </form>
-            <div class="vote" style="background-color: blue;">
-                <div></div>
+            <div class="piloteimgvote">
+                
             </div>
         </section>
     </main>
-    <!-- <footer>
+    <footer>
     <div>
       <img src="src/asset/LogoResponsive.ico" alt="logo BaudryPassion">
       <a href="#">Accueil</a>
@@ -80,7 +80,7 @@
       <a href="">F1 et scandale</a>
       <a href="vote.html">Voter</a>
     </div>
-  </footer> -->
+  </footer>
     <script src="src/js/header.js"></script>
 </body>
 

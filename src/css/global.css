@@ -16,7 +16,7 @@ main {
   z-index: 1;
   position: relative;
   width: 100%;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 h1,
@@ -28,6 +28,7 @@ span {
   color: #1d1d1b;
   font-family: neue-haas-grotesk-text, sans-serif;
 }
+
 p,
 span {
   font-size: 1rem;
@@ -48,11 +49,7 @@ h2 {
 h3 {
   font-weight: 600;
 }
-a,
-input,
-button {
-  transition: 0.3s;
-}
+
 a {
   font-size: 1rem;
   text-decoration: none;
@@ -60,13 +57,30 @@ a {
   font-weight: 500;
 }
 
+a,
+input,
+button {
+  transition: 0.3s;
+}
+
+button,
+input[type="submit"] {
+  font-size: 1rem;
+  padding: 15px 40px;
+  width: fit-content;
+  border: none;
+  background-color: black;
+  color: white;
+}
+
 a:not(.a_img):hover,
 input:hover,
-button:hover,input[type=submit]:hover, 
+button:hover,
+input[type="submit"]:hover,
 header #burgercontent:hover,
 header #burgercontent:active .burger,
-header #burgercontent:active .burger:after,
-header #burgercontent:active .burger:before,
+header #burgercontent:active .burger::after,
+header #burgercontent:active .burger::before,
 #burgercontent:hover .burger.closeclick {
   color: black;
   background-color: #d9ebff;
@@ -74,25 +88,19 @@ header #burgercontent:active .burger:before,
 
 a:not(.a_img):active,
 input:active,
-button:active,input[type=submit]:active,
+button:active,
+input[type="submit"]:active,
 header #burgercontent:active,
 #burgercontent:active .burger.closeclick {
   background-color: #007aff;
   color: white;
 }
 
-button, input[type=submit] {
-  font-size: 1rem;
-  padding: 15px 40px 15px 40px;
-  width: fit-content;
-  border: none;
-  background-color: black;
-  color: white;
-}
-em.strong{
+em.strong {
   font-style: normal;
   font-weight: bold;
 }
+
 @media only screen and (max-width: 600px) {
   html {
     font-size: 14px;
