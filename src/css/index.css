@@ -213,7 +213,7 @@ main section:first-child>article {
 }
 
 main section:first-child>article button,
-main section:first-child>article p {
+main section:first-child>article h4 {
   /* décale le button et le p pour qu'il fit avec le header */
   margin-left: 50px;
 }

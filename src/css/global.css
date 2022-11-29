@@ -22,6 +22,7 @@ main {
 h1,
 h2,
 h3,
+h4,
 a,
 p,
 span {
@@ -30,8 +31,10 @@ span {
 }
 
 p,
+h4,
 span {
   font-size: 1rem;
+  font-weight: 300;
 }
 
 h1,
