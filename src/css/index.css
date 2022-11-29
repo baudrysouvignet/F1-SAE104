@@ -56,7 +56,7 @@ header nav {
   justify-content: center;
 }
 
-main section:last-child>div img:hover,
+main section:last-child>.img_arondi img,
 header nav,
 header #burgercontent,
 header #burgercontent .burger::after,
