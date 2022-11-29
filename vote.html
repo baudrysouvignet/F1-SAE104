@@ -31,7 +31,7 @@
                 <img src="src/asset/Logo.webp" alt="Logo de la marque baudryPassion ">
             </picture>
         </a>
-        <h1>La FORMULE 1 en 2022</h1>
+        <h1>Votez pour le pilote de l'année</h1>
 
         <div id="burgercontent" onclick="burgerclick()">
             <div class="burger open" id="burger"></div>
@@ -39,8 +39,8 @@
 
         <nav class="close" id="navheader">
             <a href="index.html">Accueil</a>
-            <a href="">Leclerc, le futur?</a>
-            <a href="">F1 et scandale</a>
+            <a href="leclerchistoire.html">Leclerc, le futur?</a>
+            <a href="scandales.html">F1 et scandale</a>
             <a href="vote.html">Voter</a>
         </nav>
     </header>
@@ -50,15 +50,20 @@
             <form method="post" action="formok.php">
                 <div>
                     <p><input required="required" type="text" name="pseudo" placeholder="Votre pseudo"></p>
-                    <p><input required="required" min="1" max="110" type="number" name="age" placeholder="Entrer votre age"></p>
+                    <p><input required="required" min="1" max="110" type="number" name="age"
+                            placeholder="Entrer votre age"></p>
                     <p><input required="required" type="email" name="email" placeholder="mail@baudrypassion.fr"></p>
                 </div>
                 <div>
-                    <p><input onchange="clicker('255, 255, 0, 0.517', 'CharlesLeclerc')" type="radio" name="vote" id="CL" value="Charles Leclerc" checked><label>Charles Leclerc</label>
+                    <p><input onchange="clicker('255, 255, 0, 0.517', 'CharlesLeclerc')" type="radio" name="vote"
+                            id="CL" value="Charles Leclerc" checked><label for="CL">Charles Leclerc</label>
                     </p>
-                    <p ><input onchange="clicker('255, 183, 0, 0.517', 'MaxVerstappen')" type="radio" name="vote" id="MV" value="Max Verstapend"><label>Max Verstapend</label></p>
-                    <p><input onchange="clicker('91, 161, 152, 0.517', 'GeorgeRussel')" type="radio" name="vote" id="GR" value="George Russel"><label>George Russel</label></p>
-                    <p><input onchange="clicker('255, 183, 0, 0.517', 'SergioPerez')" type="radio" name="vote" id="SP" value="Sergio Perez"><label>Sergio Perez</label></p>
+                    <p><input onchange="clicker('255, 183, 0, 0.517', 'MaxVerstappen')" type="radio" name="vote" id="MV"
+                            value="Max Verstapend"><label for="MV">Max Verstapend</label></p>
+                    <p><input onchange="clicker('91, 161, 152, 0.517', 'GeorgeRussel')" type="radio" name="vote" id="GR"
+                            value="George Russel"><label for="GR">George Russel</label></p>
+                    <p><input onchange="clicker('255, 183, 0, 0.517', 'SergioPerez')" type="radio" name="vote" id="SP"
+                            value="Sergio Perez"><label for="SP">Sergio Perez</label></p>
                 </div>
                 <input type="submit" value="Voter">
             </form>
@@ -69,18 +74,19 @@
     </main>
 
     <footer>
-    <div>
-      <img src="src/asset/LogoResponsive.ico" alt="logo BaudryPassion">
-      <a href="#">Accueil</a>
-    </div>
-    <div>
-      <span>BaudryPassionⒸ 2022</span>
-      <a href="index.html">Accueil</a>
-      <a href="">Leclerc, le futur?</a>
-      <a href="">F1 et scandale</a>
-      <a href="vote.html">Voter</a>
-    </div>
-  </footer>
+        <div>
+            <img src="src/asset/LogoResponsive.ico" alt="logo BaudryPassion">
+            <a href="index.html">Accueil</a>
+            <a href="#">Vote</a>
+        </div>
+        <div>
+            <span>BaudryPassionⒸ 2022</span>
+            <a href="index.html">Accueil</a>
+            <a href="leclerchistoire.html">Leclerc, le futur?</a>
+            <a href="scandales.html">F1 et scandale</a>
+            <a href="vote.html">Voter</a>
+        </div>
+    </footer>
     <script src="src/js/header.js"></script>
     <script src="src/js/vote.js"></script>
 </body>
