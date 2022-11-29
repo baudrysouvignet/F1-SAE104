@@ -61,7 +61,7 @@ header nav,
 header #burgercontent,
 header #burgercontent .burger::after,
 header #burgercontent .burger::before,
-main section:last-child div#piloteimgvote,
+main section:last-child #piloteimgvote,
 main.scandale section:first-child article>div:nth-child(1n + 0):hover,
 main.scandale section:first-child article>div:nth-child(2n + 0):hover {
   transition: 0.7s;
@@ -90,7 +90,7 @@ main.scandale section:first-child article {
   grid-column: 1 / span 2;
 }
 
-main.scandale section:first-child article>a {
+main.scandale section:first-child article>a { /* définition de la taill de chaque arrondi avec les images */
   border-radius: 100vw 100vw 0 0;
   flex-grow: 1;
   width: 0;
@@ -110,7 +110,7 @@ main.scandale section:first-child article a img {
   mix-blend-mode: luminosity;
 }
 
-main.scandale section:first-child article a .title {
+main.scandale section:first-child article a .title { /* placer les textes */
   margin-top: 50px;
   text-align: center;
   width: fit-content;
@@ -192,15 +192,6 @@ main section:first-child form {
   margin-left: 50px;
   position: relative;
 }
-
-main section:first-child>div {
-  /* block avec les images et els fonds de couleurs premiére section */
-  overflow: hidden;
-  position: relative;
-  grid-column: 2;
-  grid-row: 1 / span 2;
-}
-
 
 main section:first-child>div {
   /* block avec les images et els fonds de couleurs premiére section */
