@@ -45,9 +45,22 @@
       <a href="vote.html">Voter</a>
     </nav>
   </header>
-<main>
-  <h1><?php echo $_POST [ 'vote' ]?></h1>
-</main>
+<main class="gifcontent">
+
+  <?php if ($_POST [ 'vote' ]=="Max Verstapend") {
+    echo '<img class="gif" src="src/gif/gifmax.gif" alt="gif de maxverstappen">';
+  } elseif ($_POST [ 'vote' ]=="Charles Leclerc") {
+    echo '<img class="gif" src="src/gif/gifcharles.gif" alt="gif de charles leclerc">';
+  }elseif ($_POST [ 'vote' ]=="Sergio Perez") {
+    echo '<img class="gif" src="src/gif/gifperez.gif" alt="gif de charles leclerc">';
+  } else{
+    echo '<img class="gif" src="src/gif/gifgeorge.gif" alt="gif de charles leclerc">';
+  }?>
+    
+
+  <h2>Merci <?php echo $_POST [ 'pseudo' ]?> d'avoir voter pour <?php echo $_POST [ 'vote' ]?></h2>
+  <button  onclick="location.href = 'index.html' ">Retourner à l'accueil</button>
+  </main>
   <!-- <footer>
     <div>
       <img src="src/asset/LogoResponsive.ico" alt="logo BaudryPassion">
@@ -63,5 +76,4 @@
   </footer> -->
   <script src="src/js/header.js"></script>
 </body>
-
 </html>

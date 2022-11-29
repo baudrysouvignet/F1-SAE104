@@ -1,19 +1,20 @@
 main section,
 main section article,
-main section:first-child > div,
-main section:first-child > div div,
-main section:first-child > div img,
-main section:nth-child(0n + 2) article > div > div picture img {
+main section:first-child>div,
+main section:first-child>div div,
+main section:first-child>div img,
+main section:nth-child(0n + 2) article>div>div picture img {
   width: 100% !important;
 }
 
 main section:not(.sectionvote),
-main section:nth-child(0n + 2) article > div {
+main section:nth-child(0n + 2) article>div {
   transition: 0.7s;
 }
 
+
 header,
-main section:nth-child(0n + 2) article > div > div,
+main section:nth-child(0n + 2) article>div>div,
 main section:first-child form p {
   display: flex;
   justify-content: space-between;
@@ -38,37 +39,68 @@ main section article {
 }
 
 main section:nth-child(0n + 2),
-main section:first-child > article,
+main section:first-child>article,
 main section:first-child form,
-main section:nth-child(0n + 2) article > div > div > div,
+main section:nth-child(0n + 2) article>div>div>div,
 main section:last-child article:first-child,
-header nav {
+header nav,
+.gifcontent {
   display: flex;
   flex-direction: column;
 }
 
-main section:nth-child(0n + 2) article > div > div > div,
+main section:nth-child(0n + 2) article>div>div>div,
 main section:last-child article:first-child,
 header nav {
   justify-content: center;
 }
 
-main section:last-child > div img:hover,
+main section:last-child>div img:hover,
 header nav,
 header #burgercontent,
 header #burgercontent .burger::after,
-header #burgercontent .burger::before {
+header #burgercontent .burger::before,
+main section:last-child div#piloteimgvote {
   transition: 0.7s;
 }
 
 /* page vote */
+main.gifcontent {
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  gap: 50px;
+}
+
+main.gifcontent .gif {
+  max-width: 300px;
+  max-height: 300px;
+  width: 90vw;
+  height: 90vw;
+  object-fit: cover;
+}
+
+main.gifcontent h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* page vote */
+
+main section:last-child div#piloteimgvote {
+  background-color: rgba(255, 255, 0, 0.517);
+}
 
 main section:first-child form {
   margin-left: 50px;
   position: relative;
 }
 
-main section:first-child > div {
+main section:first-child>div {
   /* block avec les images et els fonds de couleurs premiére section */
   overflow: hidden;
   position: relative;
@@ -76,25 +108,30 @@ main section:first-child > div {
   grid-row: 1 / span 2;
 }
 
-main section:last-child > div {
-  /* derniére section contrent des images a droite du texte */
-  width: calc(100% - 600px);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+
+main section:first-child>div {
+  /* block avec les images et els fonds de couleurs premiére section */
+  overflow: hidden;
+  position: relative;
+  grid-column: 2;
+  grid-row: 1 / span 2;
 }
 
-main section:last-child div.piloteimgvote {
-  background-color: rgba(255, 0, 0, 0.517);
+main section:first-child>div img {
+  /* block avec les images et els fonds de couleurs premiére section */
+  width: 100%;
+  height: calc(100vh - 130px);
+  object-fit: cover;
+  object-position: top;
 }
 
 main section:first-child form,
-main section:first-child form > div {
+main section:first-child form>div {
   gap: 15px;
 }
 
 main section:first-child form p {
-  margin:15px 0;
+  margin: 15px 0;
   width: fit-content;
 }
 
@@ -102,14 +139,14 @@ main section:first-child form p label {
   margin-left: 20px;
 }
 
-main section:first-child form > input[type="submit"] {
+main section:first-child form>input[type="submit"] {
   position: absolute;
   bottom: 50px;
 }
 
-main section:first-child form p > input[type="email"],
-main section:first-child form p > input[type="number"],
-main section:first-child form p > input[type="text"] {
+main section:first-child form p>input[type="email"],
+main section:first-child form p>input[type="number"],
+main section:first-child form p>input[type="text"] {
   width: 200px;
   height: 25px;
   padding: 5px 20px;
@@ -150,7 +187,7 @@ main section:nth-child(0n + 2) article {
   height: 90%;
 }
 
-main section:first-child > div div {
+main section:first-child>div div {
   /* positionement de la barre de couleur de la photo */
   position: absolute;
   height: 280px;
@@ -159,7 +196,7 @@ main section:first-child > div div {
   border-radius: 157px 0 0 157px;
 }
 
-main section:first-child > div img {
+main section:first-child>div img {
   /* permet de placer l'image dans la div img */
   object-position: top;
   height: 100%;
@@ -167,7 +204,7 @@ main section:first-child > div img {
   object-fit: cover;
 }
 
-main section:first-child > article {
+main section:first-child>article {
   /* élément a gauche de l'image */
   gap: 30px;
   justify-content: end;
@@ -175,17 +212,17 @@ main section:first-child > article {
   grid-row: 2;
 }
 
-main section:first-child > article button,
-main section:first-child > article p {
+main section:first-child>article button,
+main section:first-child>article p {
   /* décale le button et le p pour qu'il fit avec le header */
   margin-left: 50px;
 }
 
-main section:first-child > article button {
+main section:first-child>article button {
   margin-bottom: 50px;
 }
 
-main section:nth-child(0n + 2) article > div {
+main section:nth-child(0n + 2) article>div {
   /* carrousel */
   margin-right: 100%;
   width: 500%;
@@ -194,6 +231,14 @@ main section:nth-child(0n + 2) article > div {
 }
 
 /* scandale et carrouselle */
+main section:last-child>div {
+  /* derniére section contrent des images a droite du texte */
+  width: calc(100% - 600px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 main section:last-child article:first-child {
   /* derniére section texte a gauche des imaeges */
   gap: 50px;
@@ -201,7 +246,7 @@ main section:last-child article:first-child {
   width: 600px !important;
 }
 
-main section:nth-child(0n + 2) article > div > div > div h3,
+main section:nth-child(0n + 2) article>div>div>div h3,
 main section:last-child article:first-child h3 {
   /* modifie le titre des carrouselle et de la derniére partie de la page */
   font-size: 3rem;
@@ -218,7 +263,7 @@ main section:last-child article:first-child button {
   margin-left: 100px;
 }
 
-main section:last-child > div img {
+main section:last-child>div.img_arondi img {
   /* derniére section image arrondi a droite du texte */
   position: relative;
   z-index: 1;
@@ -229,24 +274,24 @@ main section:last-child > div img {
   filter: grayscale(1);
 }
 
-main section:nth-child(0n + 2) article > div,
-main section:nth-child(0n + 2) article > div > div picture,
-main section:nth-child(0n + 2) article > div > div picture img,
-main section:nth-child(0n + 2) article > div > div {
+main section:nth-child(0n + 2) article>div,
+main section:nth-child(0n + 2) article>div>div picture,
+main section:nth-child(0n + 2) article>div>div picture img,
+main section:nth-child(0n + 2) article>div>div {
   /* définitrion de la hauteur des image lors du deuxiéme article */
   height: 100%;
 }
 
-main section:nth-child(0n + 2) article > div > div picture img {
+main section:nth-child(0n + 2) article>div>div picture img {
   object-fit: cover;
 }
 
-main section:last-child > div img:last-child {
+main section:last-child>div img:last-child {
   /* derniére section les image a droite la derniére */
   margin-right: 50px;
 }
 
-main section:last-child > div img:hover {
+main section:last-child>div.img_arondi img:hover {
   filter: grayscale(0);
   transform: scale(1.1);
 }
@@ -279,20 +324,20 @@ main section:nth-child(0n + 2) .switch #back {
   transform: rotate(180deg);
 }
 
-main section:nth-child(0n + 2) article > div > div {
+main section:nth-child(0n + 2) article>div>div {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100vw;
 }
 
-main section:nth-child(0n + 2) article > div > div > div {
+main section:nth-child(0n + 2) article>div>div>div {
   width: calc(50% - 150px);
   margin-right: 50px;
   gap: 50px 0;
 }
 
-main section:nth-child(0n + 2) article > div > div picture {
+main section:nth-child(0n + 2) article>div>div picture {
   width: 50%;
   overflow: hidden;
   border-radius: 0 50vh 50vh 0;
@@ -305,7 +350,7 @@ main section:nth-child(0n + 2) article > div > div picture {
     flex-direction: row;
   }
 
-  main section:first-child form > input[type="submit"] {
+  main section:first-child form>input[type="submit"] {
     top: 180px;
     height: fit-content;
   }
@@ -315,20 +360,20 @@ main section:nth-child(0n + 2) article > div > div picture {
     grid-template-rows: 100px 1fr 250px;
   }
 
-  main section:first-child > article {
+  main section:first-child>article {
     gap: 20px;
     grid-row: 3;
   }
 
-  main section:first-child > article p {
+  main section:first-child>article p {
     width: 50vw;
   }
 
-  main section:first-child > article button {
+  main section:first-child>article button {
     margin-bottom: 30px;
   }
 
-  main section:first-child > div {
+  main section:first-child>div {
     grid-column: 1;
     grid-row: 2;
     width: calc(100% - 100px);
@@ -343,33 +388,34 @@ main section:nth-child(0n + 2) article > div > div picture {
     margin-top: 50px;
   }
 
-  main section:last-child article:first-child{
-    width: calc(100% - 100px);
+  main section.sectionscandale article:first-child {
+    width: calc(100% - 100px) !important;
     margin-left: 50px;
   }
 
-  main section:last-child > div {
+  main section.sectionscandale>div {
+    width: auto;
     flex-grow: 1;
     justify-content: space-between;
   }
 
-  main section:first-child > div div {
+  main section:first-child>div div {
     bottom: 20px;
     border-radius: 157px 0 0 157px;
   }
 
   /* adaptation de la carroussel page */
-  main section:nth-child(0n + 2) article > div > div {
+  main section:nth-child(0n + 2) article>div>div {
     flex-direction: column;
   }
 
-  main section:nth-child(0n + 2) article > div > div picture {
+  main section:nth-child(0n + 2) article>div>div picture {
     width: 90%;
     margin-right: 10%;
     height: calc(100% - 300px);
   }
 
-  main section:nth-child(0n + 2) article > div > div > div {
+  main section:nth-child(0n + 2) article>div>div>div {
     width: calc(100% - 100px);
     height: 300px;
     gap: 20px 0;
@@ -377,7 +423,7 @@ main section:nth-child(0n + 2) article > div > div picture {
     justify-content: center;
   }
 
-  main section:nth-child(0n + 2) article > div > div > div h3,
+  main section:nth-child(0n + 2) article>div>div>div h3,
   main section:last-child article:first-child h3 {
     font-size: 2rem;
   }
@@ -404,16 +450,21 @@ main section:nth-child(0n + 2) article > div > div picture {
     height: fit-content;
   }
 
-  main section:last-child > div img {
+  main section:last-child>div img.img_arondi {
     max-width: 250px;
   }
 
-  main section:last-child > div img:last-child {
+  main section:last-child>div img:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (max-width: 600px) {
+  main.gifcontent .gif {
+    max-width: 200px;
+    max-height: 200px;
+  }
+
   main section:first-child {
     grid-template-columns: 1fr;
     grid-template-rows: 80px 1fr 180px;
@@ -424,16 +475,21 @@ main section:nth-child(0n + 2) article > div > div picture {
     grid-template-columns: 1fr;
     grid-template-rows: 220px 300px 440px;
   }
+
   main section:first-child form {
     width: 90%;
     margin-left: 5%;
     margin-top: 20px;
     flex-direction: column;
   }
-  main section:first-child form > input[type="submit"] {
+
+  main section:first-child form>input[type="submit"] {
     top: 370px;
   }
-  main section:first-child form input:not(input[type="radio"]), main section:first-child form div:first-child p, main section:first-child form div:first-child {
+
+  main section:first-child form input:not(input[type="radio"]),
+  main section:first-child form div:first-child p,
+  main section:first-child form div:first-child {
     width: 100% !important;
   }
 
@@ -445,22 +501,22 @@ main section:nth-child(0n + 2) article > div > div picture {
     margin-top: 200px;
   }
 
-  main section:last-child > div {
+  main section:last-child>div {
     width: 100%;
     margin-left: 0;
   }
 
-  main section:first-child > div div {
+  main section:first-child>div div {
     height: 160px;
   }
 
-  main section:nth-child(0n + 2) article > div > div > div {
+  main section:nth-child(0n + 2) article>div>div>div {
     width: calc(100% - 40px);
     margin-right: 20px;
     justify-content: center;
   }
 
-  main section:first-child > article {
+  main section:first-child>article {
     width: 100%;
   }
 
@@ -473,8 +529,8 @@ main section:nth-child(0n + 2) article > div > div picture {
     margin-right: 150px;
   }
 
-  main section:first-child > article p,
-  main section:first-child > article button,
+  main section:first-child>article p,
+  main section:first-child>article button,
   main section:first-child h2,
   main section:first-child h3 {
     margin-left: 5%;

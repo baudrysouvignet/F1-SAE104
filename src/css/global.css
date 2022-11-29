@@ -16,7 +16,7 @@ main {
   z-index: 1;
   position: relative;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 h1,

@@ -31,7 +31,6 @@
                 <img src="src/asset/Logo.webp" alt="Logo de la marque baudryPassion " />
             </picture>
         </a>
-
         <h1>La FORMULE 1 en 2022</h1>
 
         <div id="burgercontent" onclick="burgerclick()">
@@ -45,29 +44,30 @@
             <a href="vote.html">Voter</a>
         </nav>
     </header>
-    <main>
+    <main class="section">
         <section class="sectionvote">
-            <h2>Quelle est le Pilote de l’année</h2>
+            <h2>Quel est le Pilote de l’année</h2>
             <form method="post" action="formok.php">
                 <div>
-                    <p><input type="text" name="pseudo" placeholder="Votre pseudo"></p>
-                    <p><input min="1" max="110" type="number" name="age" placeholder="Entrer votre age"></p>
-                    <p><input type="email" name="email" placeholder="mail@baudrypassion.fr"></p>
+                    <p><input required="required" type="text" name="pseudo" placeholder="Votre pseudo"></p>
+                    <p><input required="required" min="1" max="110" type="number" name="age" placeholder="Entrer votre age"></p>
+                    <p><input required="required" type="email" name="email" placeholder="mail@baudrypassion.fr"></p>
                 </div>
                 <div>
-                    <p><input type="radio" name="vote" id="CL" value="Charles Leclerc" checked><label>Charles Leclerc</label>
+                    <p><input onchange="clicker('255, 255, 0, 0.517', 'CharlesLeclerc')" type="radio" name="vote" id="CL" value="Charles Leclerc" checked><label>Charles Leclerc</label>
                     </p>
-                    <p><input type="radio" name="vote" id="MV" value="Max Verstapend"><label>Max Verstapend</label></p>
-                    <p><input type="radio" name="vote" id="GR" value="George Russel"><label>George Russel</label></p>
-                    <p><input type="radio" name="vote" id="SP" value="Sergio Perez"><label>Sergio Perez</label></p>
+                    <p ><input onchange="clicker('255, 183, 0, 0.517', 'MaxVerstappen')" type="radio" name="vote" id="MV" value="Max Verstapend"><label>Max Verstapend</label></p>
+                    <p><input onchange="clicker('91, 161, 152, 0.517', 'GeorgeRussel')" type="radio" name="vote" id="GR" value="George Russel"><label>George Russel</label></p>
+                    <p><input onchange="clicker('255, 183, 0, 0.517', 'SergioPerez')" type="radio" name="vote" id="SP" value="Sergio Perez"><label>Sergio Perez</label></p>
                 </div>
                 <input type="submit" value="Voter">
             </form>
-            <div class="piloteimgvote">
-                
+            <div id="piloteimgvote">
+                <img id="piloteimgvote_img" src="src/img/pilote/CharlesLeclerc/Portrait1.png" alt="">
             </div>
         </section>
     </main>
+
     <footer>
     <div>
       <img src="src/asset/LogoResponsive.ico" alt="logo BaudryPassion">
@@ -82,6 +82,7 @@
     </div>
   </footer>
     <script src="src/js/header.js"></script>
+    <script src="src/js/vote.js"></script>
 </body>
 
 </html>
