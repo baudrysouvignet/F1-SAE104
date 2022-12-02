@@ -45,7 +45,7 @@
       <a href="vote.html">Voter</a>
     </nav>
   </header>
-<main class="gifcontent">
+<main class="gifcontent flex- w90">
 
   <?php if ($_POST [ 'vote' ]=="Max Verstapend") {
     echo '<img class="gif" src="src/gif/gifmax.gif" alt="gif de maxverstappen">';

@@ -14,8 +14,11 @@
     <link rel="icon" type="image/x-icon" href="src/asset/LogoResponsive.ico">
 
     <link rel="stylesheet" href="src/css/global.css">
-    <link rel="stylesheet" href="src/css/header.css">
     <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="src/css/vote.css">
+    <link rel="stylesheet" href="src/css/scandales.css">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
 
     <title>BaudryPassion</title>
 
@@ -31,9 +34,10 @@
                 <img src="src/asset/Logo.webp" alt="Logo de la marque baudryPassion ">
             </picture>
         </a>
-        <h1>Votez pour le pilote de l'année</h1>
 
-        <div id="burgercontent" onclick="burgerclick()">
+        <h1>La FORMULE 1 en 2022</h1>
+
+        <div id="burgercontent" class="hover">
             <div class="burger open" id="burger"></div>
         </div>
 
@@ -44,51 +48,53 @@
             <a href="vote.html">Voter</a>
         </nav>
     </header>
-    <main class="section">
-        <section class="sectionvote">
-            <h2 class="anim">Quel est le Pilote de l’année</h2>
-            <form class="anim" method="post" action="formok.php">
-                <div>
+
+    <main class="vote w90">
+        <section class="grid grid_img">
+            <h2 class="anim">Quelle est le Pilote de l’année</h2>
+            <form class="flex-c anim" method="post" action="formok.php">
+                <div class="flex-c">
                     <p><input required="required" type="text" name="pseudo" placeholder="Votre pseudo"></p>
                     <p><input required="required" min="1" max="110" type="number" name="age"
                             placeholder="Entrer votre age"></p>
                     <p><input required="required" type="email" name="email" placeholder="mail@baudrypassion.fr"></p>
                 </div>
-                <div>
-                    <p><input onchange="clicker('255, 255, 0, 0.517', 'CharlesLeclerc')" type="radio" name="vote"
-                            id="CL" value="Charles Leclerc" checked><label for="CL">Charles Leclerc</label>
+                <div class="flex-c input">
+                    <p><input type="radio" name="vote" id="CL" value="Charles Leclerc" checked><label for="CL">Charles
+                            Leclerc</label>
                     </p>
-                    <p><input onchange="clicker('255, 183, 0, 0.517', 'MaxVerstappen')" type="radio" name="vote" id="MV"
-                            value="Max Verstapend"><label for="MV">Max Verstapend</label></p>
-                    <p><input onchange="clicker('91, 161, 152, 0.517', 'GeorgeRussel')" type="radio" name="vote" id="GR"
-                            value="George Russel"><label for="GR">George Russel</label></p>
-                    <p><input onchange="clicker('255, 183, 0, 0.517', 'SergioPerez')" type="radio" name="vote" id="SP"
-                            value="Sergio Perez"><label for="SP">Sergio Perez</label></p>
+                    <p><input type="radio" name="vote" id="MV" value="Max Verstapend"><label for="MV">Max
+                            Verstapend</label></p>
+                    <p><input type="radio" name="vote" id="GR" value="George Russel"><label for="GR">George
+                            Russel</label></p>
+                    <p><input type="radio" name="vote" id="SP" value="Sergio Perez"><label for="SP">Sergio Perez</label>
+                    </p>
                 </div>
-                <input type="submit" value="Voter">
+                <input class="hover" type="submit" value="Voter">
             </form>
-            <div id="piloteimgvote">
-                <img id="piloteimgvote_img" src="src/img/pilote/CharlesLeclerc/Portrait1.png" alt="">
+            </article>
+            <div id="piloteimgvote" class="hw100 transition">
+                <img id="piloteimgvote_img" src="src/img/pilote/CL/Portrait1.png"
+                    alt="Pilotes de formule 1 en noir et blanc sauf Charles leclerc" class="hw100">
             </div>
         </section>
+
     </main>
 
     <footer>
-        <div>
+        <div class="anim">
             <img src="src/asset/LogoResponsive.ico" alt="logo BaudryPassion">
-            <a href="index.html">Accueil</a>
-            <a href="#">Vote</a>
+            <a href="index.html" class="hover">Accueil</a>
         </div>
-        <div>
+        <div class="anim">
             <span>BaudryPassionⒸ 2022</span>
-            <a href="index.html">Accueil</a>
-            <a href="leclerchistoire.html">Leclerc, le futur?</a>
-            <a href="scandales.html">F1 et scandale</a>
-            <a href="vote.html">Voter</a>
+            <a href="index.html" class="hover">Accueil</a>
+            <a href="leclerchistoire.html" class="hover">Leclerc, le futur?</a>
+            <a href="scandales.html" class="hover">F1 et scandale</a>
+            <a href=" vote.html" class="hover">Voter</a>
         </div>
     </footer>
-    <script src="src/js/header.js"></script>
-    <script src="src/js/vote.js"></script>
+    <script src="src/js/global.js"></script>
 </body>
 
 </html>

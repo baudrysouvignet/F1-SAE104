@@ -2,192 +2,174 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="author" content="Souvignet Baudry">
-  <meta name="description" content="Bienvenue sur le site dédié a la formule 1.">
-  <meta name="keywords"
-    content="F1, formule1, voiture, course, motogp, ferrari, red-bull, Hamilton, Mercedes, FIA, FFSA">
+    <meta name="author" content="Souvignet Baudry">
+    <meta name="description" content="Bienvenue sur le site dédié a la formule 1.">
+    <meta name="keywords"
+        content="F1, formule1, voiture, course, motogp, ferrari, red-bull, Hamilton, Mercedes, FIA, FFSA">
 
-  <link rel="icon" type="image/x-icon" href="src/asset/LogoResponsive.ico">
+    <link rel="icon" type="image/x-icon" href="src/asset/LogoResponsive.ico">
 
-  <link rel="stylesheet" href="src/css/global.css">
-  <link rel="stylesheet" href="src/css/header.css">
-  <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="src/css/global.css">
+    <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="src/css/vote.css">
+    <link rel="stylesheet" href="src/css/scandales.css">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
 
-  <title>BaudryPassion</title>
+    <title>BaudryPassion</title>
 
-  <link rel="stylesheet" href="https://use.typekit.net/tqh7gvy.css">
+    <link rel="stylesheet" href="https://use.typekit.net/tqh7gvy.css">
 </head>
 
 <body>
-  <header>
-    <a class="a_img" href="#">
-      <picture>
-        <source media="(max-width: 600px)" srcset="src/asset/LogoResponsive.webp 80w" sizes="35px">
-        <!-- changement d'image responsive -->
-        <img src="src/asset/Logo.webp" alt="Logo de la marque baudryPassion ">
-      </picture>
-    </a>
-
-    <h1>La FORMULE 1 en 2022</h1>
-
-    <div id="burgercontent" onclick="burgerclick()">
-      <div class="burger open" id="burger"></div>
-    </div>
-
-    <nav class="close" id="navheader">
-      <a href="#">Accueil</a>
-      <a href="leclerchistoire.html">Leclerc, le futur?</a>
-      <a href="scandales.html">F1 et scandale</a>
-      <a href="vote.html">Voter</a>
-    </nav>
-  </header>
-
-  <main>
-    <section>
-      <h2 class="anim">Formule 1</h2>
-      <h3 class="anim">Le temple de la Performance.</h3>
-      <article class="contenu anim">
-        <h4>Un engouement de plus en plus important touche la F1 depuis c’est deux dernières années dû à Netflix. Charles
-          Leclerc est un des visages de proue ce renouveau de la F1.</h4>
-       <button onclick="window.scroll({ top: window.innerHeight*1.1, left: 100, behavior: 'smooth'});">Découvrir la F1</button>
-      </article>
-      <div>
-        <div></div>
-        <img src="src/img/3pilotes.webp" alt="Image des pilotes Charle Lecler, Lando Noris et , George Russel">
-      </div>
-    </section>
-
-    <section id="carroussel">
-      <!-- section 2 avec le carroussel -->
-      <article class="anim">
-        <div id="contentCarr">
-          <div>
-            <!-- premiére page du carroussel -->
+    <header>
+        <a class="a_img" href="index.html">
             <picture>
-              <img src="src/img//carroussel/charleleclerc.webp"
-                alt="Image de charle lecler pendant un arret aux stands">
+                <source media="(max-width: 600px)" srcset="src/asset/LogoResponsive.webp 80w" sizes="35px">
+                <!-- changement d'image responsive -->
+                <img src="src/asset/Logo.webp" alt="Logo de la marque baudryPassion ">
             </picture>
-            <div>
-              <h3>Mais la F1, c’est quoi?</h3>
-              <p>Entre vitesse, stratégie, et sportivité, la F1 est la catégorie reine du sport automobile. Une saison
-                se déroule en plusieurs week-end, 23 sont prévu en 2023. Chaque weekends procure de nouvelles émotions
-                et apport sa part de nouveauté et de scandale, ils se déroulent en trois parties que vous découvrirez
-                dans la suite de ce carroussel.<br>
-                En bref la Formule 1 c'est 20 pilotes 10 écuries et 1 seul gagnant et <em class="strong">bien plus</em>.
-              </p>
-            </div>
-          </div>
+        </a>
 
-          <div>
-            <!-- deuxiéme page du carroussel -->
-            <picture>
-              <img src="src/img/carroussel/elibre.webp"
-                alt="Image des méchanicien red-bull">
-            </picture>
-            <div>
-              <h3>Les essaies libres</h3>
-              <p>Un week-end de course commence par des essais libres. C’est une étape cruciale dans le développement
-                des voitures, cela permet de réaliser des tests à taille réelle et d’adapter sa stratégie pour la
-                course. La majorité du temps, 3 séances sont disputées, deux le vendredi et une le samedi. Le temps de
-                chaque pilote est dévoilé après la séance, cela permet aux spectateurs et aux écuries de ce procheter
-                sur les écuries favorites pour le dimanche et les améliorations à apporter.</p>
-            </div>
-          </div>
+        <h1>La FORMULE 1 en 2022</h1>
 
-          <div>
-            <!-- troisiéme page du carroussel -->
-            <picture>
-              <img src="src/img/carroussel/grille.webp" alt="Image de la parades des avions militaires sur la grille">
-              <!-- source : https://auto-live.fr/f1-gp-du-mexique-la-grille-provisoire-avant-le-depart/ -->
-            </picture>
-            <div>
-              <h3>Les qualifications</h3>
-              <p>Le moment le plus déterminant pour la course du dimanche provient le samedi avec les qualifications.
-                L’objectif est simple, mais la réalisation est complexe. Les pilotes doivent réaliser le meilleur tour
-                possible avec ou sans l’aide de son coéquipier. Aucune gestion des pneus n’est nécessaire durant les
-                qualifications, mais la stratégie est toujours présente.</p>
-            </div>
-          </div>
-
-          <div>
-            <!-- cinquiéme page du carroussel -->
-            <picture>
-              <img src="src/img/carroussel/victoire.webp" alt="Bataille en course entre deux voitures">
-            </picture>
-            <div>
-              <h3>La course</h3>
-              <p>Ça y est, nous y sommes, le coeur palpite en attendant l’extinction des feux. Le départ de la course
-                peut être lancé. Mais les pilotes ne font pas ce qu'ils veulent, les commissaires de courses sont là
-                pour juger les actions dangereuses et pénalisé les pilotes responsables. Nous avons pu voir en 2022 une
-                très belle bataille sur la piste entre Max Verstapend et Charles Leclerc. Le dimanche de course réserve
-                toujours des surprises.</p>
-            </div>
-          </div>
-
-          <div>
-            <!-- sixiéme page du carroussel -->
-            <picture>
-              <img src="src/img/carroussel/strategie.webp"
-                alt="Image de LewisHamilton qui quitte les stands aprés un arret">
-            </picture>
-            <div>
-              <h3>La stratégie</h3>
-              <p>L’élément le plus important d’une écurie, l’élément qui peut faire basculer le cours d’une course est
-                la stratégie. La stratégie est honnie présente dans la formule 1. Sans son équipe, le pilote n’est rien
-                et vice-versa, mais si les stratèges se trompent de stratégie comme Ferrari à Monaco en 2022, une
-                potentielle victoire peut s’échapper. La stratégie comprend la gestion des pneus, du carburant, d'autres
-                pilotes etc.</p>
-            </div>
-          </div>
+        <div id="burgercontent" class="hover">
+            <div class="burger open" id="burger"></div>
         </div>
-      </article>
-      <div class="switch anim">
-        <input onclick="switchcar('back')" type="image" id="back" alt="fléche de navigation retour en arriére"
-          src="src/asset/switch.svg">
-        <input onclick="switchcar('next')" type="image" id="next" alt="fléche de navigation aller en avant"
-          src="src/asset/switch.svg">
-      </div>
-      <h2 class="anim">Les bases de la F1</h2>
-    </section>
 
-    <section class="sectionscandale anim">
-      <article>
-        <h3>F1 et scandales </h3>
-        <p>La formule 1 est malheureusement souvent synonyme de scandale, beaucoup de pilotes peuvent être concerné.
-          Cela peut être dû à des décisions de la FIA controversé, où d'autres événements externes. Charles Leclerc
-          comme l’ensemble des autres pilotes est concerné par ces controverses. Celle qui a marqué 2022 et celle de
-          Pierre Gasly pilote français mais de Charles, je vous laisse découvrir une explication complète de cette
-          histoire et bien d’autres en cliquant sur le bouton ci-dessous.</p>
-        <button>Découvrir les articles</button>
-      </article>
-      <div class="img_arondi">
-        <img src="src/img/index/pierregasly.webp" alt="Image de pierre gasly lors du gp du japon">
-        <img src="src/img/index/redbull.webp" alt="photo du logo red bull">
-        <img src="src/img/index/charles.webp" alt="image de la voiture de charles leclerc">
-      </div>
-    </section>
-  </main>
+        <nav class="close" id="navheader">
+            <a href="index.html">Accueil</a>
+            <a href="leclerchistoire.html">Leclerc, le futur?</a>
+            <a href="scandales.html">F1 et scandale</a>
+            <a href="vote.html">Voter</a>
+        </nav>
+    </header>
 
-  <footer>
-    <div class="anim">
-      <img src="src/asset/LogoResponsive.ico" alt="logo BaudryPassion">
-      <a href="#">Accueil</a>
-    </div>
-    <div class="anim">
-      <span>BaudryPassionⒸ 2022</span>
-      <a href="#">Accueil</a>
-      <a href="leclerchistoire.html">Leclerc, le futur?</a>
-      <a href="scandales.html">F1 et scandale</a>
-      <a href=" vote.html">Voter</a>
-    </div>
-  </footer>
+    <main class="index">
+        <section class="grid_img w95">
+            <h2 class="anim">Formule 1</h2>
+            <h3 class="anim">Le temple de la Performance.</h3>
+            <article class="flex-c anim">
+                <h4>Un engouement de plus en plus important touche la F1 depuis c’est deux dernières années dû à
+                    Netflix. <a class="strong hover" href="leclerchistoire.html">Charles Leclerc</a> est un des visages
+                    de proue ce renouveau de la
+                    F1.<br>
+                </h4>
+                <button onClick="Javascript:window.document.location.href='#carroussel';" class="hover">Découvrir la
+                    F1</button>
+            </article>
+            <div class="hw100">
+                <img src="src/img/3pilotes.webp" alt="Pilotes de formule 1 en noir et blanc sauf Charles leclerc"
+                    class="hw100">
+                <div></div>
+            </div>
+        </section>
 
-  <script src="src/js/index.js"></script>
-  <script src="src/js/header.js"></script>
+        <section id="carroussel">
+            <article id="contentCarr" class="flex- transition">
+                <div class="flex-">
+                    <img src="src/img/carroussel/charleleclerc.webp" alt="">
+                    <div class="flex-c">
+                        <h2 class="w90 anim">MAIS LA F1, C’EST QUOI?</h2>
+                        <p class="w90 anim">Entre vitesse, stratégie, et sportivité, la F1 est la catégorie reine du sport
+                            automobile. Une saison se déroule en plusieurs week-end, 23 sont prévu en 2023. Chaque
+                            weekends procure de nouvelles émotions et apport sa part de nouveauté et de scandale, ils se
+                            déroulent en trois parties que vous découvrirez dans la suite de ce carroussel.
+                            En bref la Formule 1 c'est 20 pilotes 10 écuries et 1 seul gagnant et <em
+                                class="strong hover" id="next">bien plus</em>.</p>
+                    </div>
+                </div>
+                <div class="flex-">
+                    <img src="src/img/carroussel/elibre.webp" alt="">
+                    <div class="flex-c">
+                        <h2 class="w90 anim">LES ESSAIES LIBRES</h2>
+                        <p class="w90 anim">Un week-end de course commence par des essais libres. C’est une étape cruciale
+                            dans le développement des voitures, cela permet de réaliser des tests à taille réelle et
+                            d’adapter sa stratégie pour la course. La majorité du temps, 3 séances sont disputées, deux
+                            le vendredi et une le samedi. Le temps de chaque pilote est dévoilé après la séance, cela
+                            permet aux spectateurs et aux écuries de ce procheter sur les écuries favorites pour le
+                            dimanche et les améliorations à apporter.</p>
+                    </div>
+                </div>
+                <div class="flex-">
+                    <img src="src/img/carroussel/grille.webp" alt="">
+                    <div class="flex-c">
+                        <h2 class="w90 anim">LES QUALIFICATIONS</h2>
+                        <p class="w90 anim">Le moment le plus déterminant pour la course du dimanche provient le samedi avec
+                            les qualifications. L’objectif est simple, mais la réalisation est complexe. Les pilotes
+                            doivent réaliser le meilleur tour possible avec ou sans l’aide de son coéquipier. Aucune
+                            gestion des pneus n’est nécessaire durant les qualifications, mais la stratégie est toujours
+                            présente.</p>
+                    </div>
+                </div>
+                <div class="flex-">
+                    <img src="src/img/carroussel/victoire.webp" alt="">
+                    <div class="flex-c">
+                        <h2 class="w90 anim">LA COURSE</h2>
+                        <p class="w90 anim">Ça y est, nous y sommes, le coeur palpite en attendant l’extinction des feux. Le
+                            départ de la course peut être lancé. Mais les pilotes ne font pas ce qu'ils veulent, les
+                            commissaires de courses sont là pour juger les actions dangereuses et pénalisé les pilotes
+                            responsables. Nous avons pu voir en 2022 une très belle bataille sur la piste entre Max
+                            Verstapend et Charles Leclerc. Le dimanche de course réserve toujours des surprises.</p>
+                    </div>
+                </div>
+                <div class="flex-">
+                    <img src="src/img/carroussel/strategie.webp" alt="">
+                    <div class="flex-c">
+                        <h2 class="w90 anim">LA STRATÉGIE</h2>
+                        <p class="w90 anim">L’élément le plus important d’une écurie, l’élément qui peut faire basculer le
+                            cours d’une course est la stratégie. La stratégie est honnie présente dans la formule 1.
+                            Sans son équipe, le pilote n’est rien et vice-versa, mais si les stratèges se trompent de
+                            stratégie comme Ferrari à Monaco en 2022, une potentielle victoire peut s’échapper. La
+                            stratégie comprend la gestion des pneus, du carburant, d'autres pilotes etc.</p>
+                    </div>
+                </div>
+            </article>
+            <h1 class="anim">LES BASES DE LA F1</h1>
+            <div class="flex- anim">
+                <img src="src/asset/switch.svg" class="hover transition" id="back" alt="fléche de gauche pour naviguer">
+                <img src="src/asset/switch.svg" class="hover transition" id="next" alt="fléche de droite pour naviguer">
+            </div>
+        </section>
+
+        <section class="flex- w90" id="scandale">
+            <article class="flex-c">
+                <h2 class="anim">F1 ET SCANDALES</h2>
+                <p class="anim">La formule 1 est malheureusement souvent synonyme de scandale, beaucoup de pilotes peuvent être
+                    concerné. Cela peut être dû à des décisions de la FIA controversé, où d'autres événements externes.
+                    Charles Leclerc comme l’ensemble des autres pilotes est concerné par ces controverses. Celle qui a
+                    marqué 2022 et celle de Pierre Gasly pilote français mais de Charles, je vous laisse découvrir une
+                    explication complète de cette histoire et bien d’autres en cliquant sur le bouton ci-dessous.</p>
+                <button class="hover anim">Découvrir les articles</button>
+            </article>
+            <div class="flex-">
+                <img class="transition" src="src/img/index/pierregasly.webp" alt="Image de pierre gasly lors du gp du japon">
+                <img class="transition" src="src/img/index/redbull.webp" alt="photo du logo red bull">
+                <img class="transition" src="src/img/index/charles.webp" alt="image de la voiture de charles leclerc">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="anim">
+          <img src="src/asset/LogoResponsive.ico" alt="logo BaudryPassion">
+          <a href="index.html" class="hover">Accueil</a>
+        </div>
+        <div class="anim">
+          <span>BaudryPassionⒸ 2022</span>
+          <a href="index.html" class="hover">Accueil</a>
+          <a href="leclerchistoire.html" class="hover">Leclerc, le futur?</a>
+          <a href="scandales.html" class="hover">F1 et scandale</a>
+          <a href=" vote.html" class="hover">Voter</a>
+        </div>
+      </footer>
+
+    <script src="src/js/global.js"></script>
+    <script src="src/js/index.js"></script>
 </body>
 
 </html>
