@@ -21,7 +21,7 @@ html {
   scroll-behavior: smooth;
 }
 
-h1 {
+h1, .little {
   font-size: 0.75rem;
   font-weight: 300;
   text-transform: uppercase;
@@ -338,7 +338,7 @@ main .grid_text div img {
   height: fit-content;
 }
 
-.index #carroussel h1,
+.index #carroussel h2,
 .index #carroussel > div:last-child {
   /* fleche pour naviguer */
   position: absolute;
@@ -346,12 +346,12 @@ main .grid_text div img {
   transform: translate(-50%, 0);
 }
 
-.index #carroussel h1,
+.index #carroussel h2,
 .index #carroussel > div:last-child {
   margin-top: 20px;
 }
 
-.index #carroussel h1 {
+.index #carroussel h2 {
   padding: 4px 0;
 }
 
@@ -686,7 +686,7 @@ footer > div:first-child {
   justify-content: left;
 }
 
-footer > div:last-child {
+footer > div:nth-child(0n + 2) {
   justify-content: center;
   gap: 10px 50px;
   flex-wrap: wrap;
