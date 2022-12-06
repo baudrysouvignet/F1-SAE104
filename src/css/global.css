@@ -1,52 +1,50 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: #f3f3f3;
-    color: #1d1d1b;
-    font-family: neue-haas-grotesk-text, sans-serif;
-
+  background-color: #f3f3f3;
+  color: #1d1d1b;
+  font-family: neue-haas-grotesk-text, sans-serif;
 }
 
 main {
-    float: left;
-    overflow: hidden;
-    width: 100%;
-    height: fit-content;
+  float: left;
+  overflow: hidden;
+  width: 100%;
+  height: fit-content;
 }
 
 html {
-    font-size: 20px;
-    scroll-behavior: smooth;
-
+  font-size: 20px;
+  scroll-behavior: smooth;
 }
 
 h1 {
-    font-size: 0.75rem;
-    font-weight: 300;
-    text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 h2,
 h3 {
-    font-weight: 700;
-    text-transform: uppercase;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 h2 {
-    font-size: 3.2rem;
+  font-size: 3.2rem;
 }
 
 h3 {
-    font-size: 1.1rem;
-    font-weight: 300;
+  font-size: 1.1rem;
+  font-weight: 300;
 }
 
 img {
-    object-fit: cover;
-    object-position: top;
+  object-fit: cover;
+  object-position: top;
 }
 
 h4,
@@ -54,193 +52,233 @@ p,
 label,
 input,
 a {
-    text-decoration: none;
-    color: #1d1d1b;
-    font-size: 1rem;
-    font-weight: 300;
+  text-decoration: none;
+  color: #1d1d1b;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
-.grid_img h2~h3 {
-    margin-top: 3.4rem;
+.grid_img h2 ~ h3 {
+  margin-top: 3.4rem;
 }
 
 button,
 input[type="submit"] {
-    font-size: 1rem;
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 15px 40px;
-    color: white;
-    width: fit-content;
-    height: fit-content;
+  font-size: 1rem;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  color: white;
+  width: fit-content;
+  height: fit-content;
 }
 
 /* effet s'apparition lors du scroll */
-.anim { 
-    opacity: 0;
-    transform: translateY(70px);
-  }
-  .anim_visible {
-    opacity: 1;
-    transform: translateY(0px);
-    transition:0.7s;
-  }
+.anim {
+  opacity: 0;
+  transform: translateY(70px);
+}
+.anim_visible {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: 0.7s;
+}
 
 /* class utilitaires */
 .hover {
-    transition: 0.7s;
+  transition: 0.7s;
 }
 
 .strong {
-    font-style: normal;
-    font-weight: bold;
+  font-style: normal;
+  font-weight: bold;
 }
 
 .hw100 {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 [class*="flex-"] {
-    display: flex;
+  display: flex;
 }
 
 [class*="flex-c"] {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .hover:hover {
-    cursor: pointer;
-    color: black;
-    background-color: #d9ebff;
+  cursor: pointer;
+  color: black;
+  background-color: #d9ebff;
 }
 
 .hover:active {
-    background-color: #007aff;
-    color: white;
+  background-color: #007aff;
+  color: white;
 }
 
 .w90,
 .w95 {
-    margin-left: 50px;
+  margin-left: 50px;
 }
 
 .w90 {
-    /* permet de centrer par rapport au header */
-    width: calc(100% - 100px);
+  /* permet de centrer par rapport au header */
+  width: calc(100% - 100px);
 }
 
 .w95 {
-    /* permet de centrer par rapport au header */
-    width: calc(100% - 50px);
+  /* permet de centrer par rapport au header */
+  width: calc(100% - 50px);
 }
 
 .transition {
-    transition: 0.7s;
+  transition: 0.7s;
 }
 
 /* code global aux différentes pages */
-main section {
-    float: left;
-    padding-top: 130px;
-    height: calc(100vh - 130px);
+main section:not(.scandales section:not(:first-child)) {
+  float: left;
+  padding-top: 130px;
+  height: calc(100vh - 130px);
 }
-section, article.grid_text{
-    min-height: 800px;
+section,
+article.grid_text {
+  min-height: 800px;
 }
 
 main section:not(.w95, .w90) {
-    width: 100%;
+  width: 100%;
 }
 
 main .grid_img {
-    display: grid;
-    grid-template: repeat(2, 1fr)/ 480px 1fr;
-    /* deux colone et ligne égales */
+  display: grid;
+  grid-template: repeat(2, 1fr) / 480px 1fr;
+  /* deux colone et ligne égales */
 }
 
-main .grid_img div {
-    /* class utilitaires pour une img a gauche du texte */
-    grid-column: 2;
-    grid-row: 1 / span 2;
+main .grid_img > div {
+  /* class utilitaires pour une img a gauche du texte */
+  position: relative;
+  grid-column: 2;
+  grid-row: 1 / span 2;
 }
 
 main .grid_img h2,
 main .grid_img h3 {
-    /* class utilitaires pour une img a gauche du texte */
-    grid-column: 1;
-    grid-row: 1;
+  /* class utilitaires pour une img a gauche du texte */
+  grid-column: 1;
+  grid-row: 1;
 }
 
 main .grid_img *:not(h2, h3, div) {
-    /* class utilitaires pour une img a gauche du texte */
-    grid-column: 1;
-    grid-row: 2;
-    gap: 30px;
-    justify-content: end;
+  /* class utilitaires pour une img a gauche du texte */
+  grid-column: 1;
+  grid-row: 2;
+  gap: 30px;
+  justify-content: end;
 }
 
 main .grid_img article,
 main .grid_img h2,
 main .grid_img h3 {
-    width: 100%;
+  width: 100%;
 }
 
-main .grid_img article>*:last-child {
-    margin-bottom: 50px;
+main .grid_img article > *:last-child {
+  margin-bottom: 50px;
 }
 
 main .grid_text {
-    height: calc(100vh - 130px);
-    display: grid;
-    grid-template: 1fr 1fr / 1fr minmax(500px, 1fr);
-    gap: 50px;
-    align-items: flex-end;
+  height: calc(100vh - 130px);
+  display: grid;
+  grid-template: 1fr 1fr / 1fr minmax(500px, 1fr);
+  gap: 50px;
+  align-items: flex-end;
 }
-main .grid_text h2{
-    grid-column: 2;
-    grid-row: 1;
+main .grid_text h2 {
+  grid-column: 2;
+  grid-row: 1;
 }
-main .grid_text p{
-    height: 100%;
-    grid-column: 2;
-    grid-row: 2;
+main .grid_text p {
+  height: 100%;
+  grid-column: 2;
+  grid-row: 2;
 }
-main .grid_text div{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    grid-column: 1;
-    grid-row: 1 / span 2;
+main .grid_text div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  grid-column: 1;
+  grid-row: 1 / span 2;
 }
-main .grid_text div div{
-    position: absolute;
-    width: 50%;
+main .grid_text div > div {
+  position: absolute;
+  width: 50%;
 }
-main .grid_text div img{
-    position: relative;
-    width: 100%;
-    height: 100%;
+main .grid_text div img {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 /* php page */
-.gifcontent{
-    flex-direction: column;
+.gifcontent {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 50px;
+}
+.gifcontent img {
+  height: 300px;
+  width: 300px;
+  border-radius: 150vh 150vh 0 0;
+}
+.gifcontent button {
+  width: 300px;
+}
+.gifcontent h2 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+/* chalres leclerc page */
+.lC section > div > nav {
+    display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    gap: 50px;
+    gap: 60px;
+    flex-wrap: wrap;
+  position: absolute;
+  align-items: center;
+  bottom: 40px;
+  height: fit-content;
 }
-.gifcontent img{
-    height: 300px;
-    width: 300px;
-    border-radius: 150vh 150vh 0 0;
+.lC section > div > nav div {
+    cursor: pointer;
+  width: 254px;
+  border-radius: 20px;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
 }
-.gifcontent button{
-    width: 300px;
+.lC section > div > nav div p {
+  float: left;
+  width: calc(100% - 20px);
+  font-size: 1rem;
+  margin-left: 10px;
+  margin-top: 10px;
 }
-.gifcontent h2{
-    text-align: center;
-   font-size: 1.5rem;
+.lC section > div > nav div img {
+  margin-top: 20px;
+  margin-left: 10px;
+  height: 30px;
+  width: 30px;
+}
+.lC section > div > nav div.selected {
+    transition: 0.7s;
+  background-color: rgb(255, 255, 255);
+}
+.lC section > div > nav div:not(.selected) {
+  background-color: rgba(255, 255, 255, 0.442);
 }

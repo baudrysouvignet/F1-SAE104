@@ -1,195 +1,194 @@
 /* responsive */
 @media only screen and (max-width: 1300px) {
-    h2 {
-        font-size: 3.15rem;
-    }
-    /* scandales */
-    .scandales section:first-child div div:nth-child(2n) {
-        display: none;
-    }
-    main .grid_text{
-        height: calc(100vh - 180px);
-        grid-template: 1fr auto / 1fr 2fr;
-        align-items: center;
-    }
-    main .grid_text h2{
-        grid-column: 1;
-        grid-row: 2;
-    }
-    main .grid_text p{
-        height: fit-content;
-        grid-column: 2;
-        grid-row: 2;
-    }
-    main .grid_text div{
-        grid-column: 1 / span 2;
-        grid-row: 1;
-    }
-    /*  carroussek */
-    .index #carroussel article>div,
-    .index #scandale {
-        flex-direction: column;
-    }
+  h2 {
+    font-size: 3.15rem;
+  }
+  /* scandales */
+  .scandales section:first-child div div:nth-child(2n) {
+    display: none;
+  }
+  main .grid_text {
+    height: calc(100vh - 180px);
+    grid-template: calc(100vh - 381px) 331px / 1fr 2fr;
+    gap: 20px;
+    align-items: center;
+  }
+  main .grid_text h2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  main .grid_text p {
+    height: fit-content;
+    grid-column: 2;
+    grid-row: 2;
+  }
+  main .grid_text div {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+  /*  carroussek */
+  .index #carroussel article > div,
+  .index #scandale {
+    flex-direction: column;
+  }
 
-    .index #carroussel article div img {
-        height: 0;
-    }
+  .index #carroussel article div img {
+    height: 0;
+  }
 
-    .index #carroussel article>div>* {
-        width: 100%;
-    }
+  .index #carroussel article > div > * {
+    width: 100%;
+  }
 
-    .index #carroussel article>div>div,
-    .index #scandale article {
-        flex-grow: unset;
-        height: fit-content;
-    }
+  .index #carroussel article > div > div,
+  .index #scandale article {
+    flex-grow: unset;
+    height: fit-content;
+  }
 
-    .index #scandale div {
-        height: 500px;
-        align-items: flex-start;
-    }
+  .index #scandale div {
+    height: 500px;
+    align-items: flex-start;
+  }
 
-    /* acnadale */
-    .index #scandale div {
-        flex-grow: 1;
-        width: 100%;
-    }
+  /* acnadale */
+  .index #scandale div {
+    flex-grow: 1;
+    width: 100%;
+  }
 
-    .index #scandale article {
-        width: 100%;
-    }
+  .index #scandale article {
+    width: 100%;
+  }
 
-    /* vote */
-    .grid_img h2~h3 {
-        display: none;
-    }
+  /* vote */
+  .grid_img h2 ~ h3 {
+    display: none;
+  }
 
-    main .grid_img {
-        height: fit-content;
-        grid-template: auto calc(100vh - 400px) auto / 1fr;
-        gap: 20px;
-        grid-auto-rows: min-content;
-    }
+  main .grid_img {
+    height: fit-content;
+    grid-template: auto calc(100vh - 400px) auto / 1fr;
+    gap: 20px;
+    grid-auto-rows: min-content;
+  }
 
-    main .grid_img article,
-    .vote section form {
-        /* crepositionement du texte */
-        height: fit-content;
-        grid-row: 3;
-    }
+  main .grid_img article,
+  .vote section form {
+    /* crepositionement du texte */
+    height: fit-content;
+    grid-row: 3;
+  }
 
-    .vote section form {
-        flex-direction: row;
-        align-items: center;
-        justify-content: start;
-    }
+  .vote section form {
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+  }
 
-    main .grid_img div {
-        /* class utilitaires pour une img en dessous du texte */
-        grid-column: 1;
-        grid-row: 2;
-    }
+  main .grid_img div {
+    /* class utilitaires pour une img en dessous du texte */
+    grid-column: 1;
+    grid-row: 2;
+  }
 
-    main .grid_img article {
-        margin-top: 20px;
-    }
+  main .grid_img article {
+    margin-top: 20px;
+  }
 
-    main .grid_img article>*:last-child {
-        margin-bottom: 30px;
-    }
+  main .grid_img article > *:last-child {
+    margin-bottom: 30px;
+  }
 }
 
 @media only screen and (max-width: 700px) {
-    main .grid_text{
-        height: calc(100vh - 100px);
-        grid-template: 1fr auto auto / 1fr;
-    }
-    main .grid_text h2{
-        grid-column: 1;
-        grid-row: 2;
-    }
-    main .grid_text p{
-        height: fit-content;
-        grid-column: 1;
-        grid-row: 3;
-    }
+  main .grid_text {
+    height: calc(100vh - 100px);
+    grid-template: 1fr auto auto / 1fr;
+  }
+  main .grid_text h2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  main .grid_text p {
+    height: fit-content;
+    grid-column: 1;
+    grid-row: 3;
+  }
 
-    h2 {
-        font-size: 3rem;
-    }
-    html {
-        font-size: 14px;
-    }
+  h2 {
+    font-size: 3rem;
+  }
+  html {
+    font-size: 14px;
+  }
 
-    main section {
-        height: calc(100vh - 75px);
-    }
+  main section {
+    height: calc(100vh - 75px);
+  }
 
-    .index #scandale {
-        max-height: 100vh;
-        padding-top: 0;
-        flex-direction: column-reverse;
-    }
-    .index #scandale div{
-        gap: 10px;
-    }
-    .index #scandale div img {
-        height: 100%;
-    }
-    /* scandales */
-    .scandales section:first-child div div:not(:first-child) {
-        display: none;
-    }
-    .scandales section:first-child h2 {
-        width: 100%;
-        min-width: unset;
-    }
+  .index #scandale {
+    max-height: 100vh;
+    padding-top: 0;
+    flex-direction: column-reverse;
+  }
+  .index #scandale div {
+    gap: 10px;
+  }
+  .index #scandale div img {
+    height: 100%;
+  }
+  /* scandales */
+  .scandales section:first-child div div:not(:first-child) {
+    display: none;
+  }
+  .scandales section:first-child h2 {
+    width: 100%;
+    min-width: unset;
+  }
 
-    /* global */
-    .w90,
-    .w95 {
-        margin-left: 20px;
-    }
+  /* global */
+  .w90,
+  .w95 {
+    margin-left: 20px;
+  }
 
-    .w90 {
-        /* permet de centrer par rapport au header */
-        width: calc(100% - 40px);
-    }
+  .w90 {
+    /* permet de centrer par rapport au header */
+    width: calc(100% - 40px);
+  }
 
-    .w95 {
-        /* permet de centrer par rapport au header */
-        width: calc(100% - 40px);
-    }
+  .w95 {
+    /* permet de centrer par rapport au header */
+    width: calc(100% - 40px);
+  }
 
-    /* changement taille des polices */
-    h3 {
-        font-size: 1.2rem;
-    }
+  /* changement taille des polices */
+  h3 {
+    font-size: 1.2rem;
+  }
 
-    /* premiére apge avec les trois pilotes */
-    main section:first-child {
-        padding-top: 75px;
-    }
+  /* premiére apge avec les trois pilotes */
+  main section:first-child {
+    padding-top: 75px;
+  }
 
-    /* vote */
-    .vote section {
-        height: fit-content;
-        min-height: unset;
-    }
+  /* vote */
+  .vote section {
+    height: fit-content;
+    min-height: unset;
+  }
 
-    .vote section form {
-        height: fit-content;
-        flex-direction: column;
-        align-items: start;
-        justify-content: start;
-    }
+  .vote section form {
+    height: fit-content;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
 
-
-    .vote section form div:first-child p  input,
-    .vote section form div,
-    .vote section form div:first-child p {
-        width: 100%;
-    }
-
+  .vote section form div:first-child p input,
+  .vote section form div,
+  .vote section form div:first-child p {
+    width: 100%;
+  }
 }

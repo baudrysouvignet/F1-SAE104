@@ -63,6 +63,14 @@
     margin-top: 70px;
     background-color: inherit ;
 }
+.scandales section article{
+
+    padding-top: 130px;
+    height: calc(100vh - 130px);
+}
+.scandales section:not(:first-child) article:nth-child(2n+1) div div{
+    left: 50%;
+}
 /* color */
 .scandales section:first-child div div:first-child, main .grid_text:first-child div div {
     background-color: #940B3F;

@@ -1,0 +1,902 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f3f3f3;
+  color: #1d1d1b;
+  font-family: neue-haas-grotesk-text, sans-serif;
+}
+
+main {
+  float: left;
+  overflow: hidden;
+  width: 100%;
+  height: fit-content;
+}
+
+html {
+  font-size: 20px;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 0.75rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h2,
+h3 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+img {
+  object-fit: cover;
+  object-position: top;
+}
+
+h4,
+p,
+label,
+input,
+a {
+  text-decoration: none;
+  color: #1d1d1b;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.grid_img h2 ~ h3 {
+  margin-top: 3.4rem;
+}
+
+button,
+input[type="submit"] {
+  font-size: 1rem;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+}
+
+/* effet s'apparition lors du scroll */
+.anim {
+  opacity: 0;
+  transform: translateY(70px);
+}
+.anim_visible {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: 0.7s;
+}
+
+/* class utilitaires */
+.hover {
+  transition: 0.7s;
+}
+
+.strong {
+  font-style: normal;
+  font-weight: bold;
+}
+
+.hw100 {
+  width: 100%;
+  height: 100%;
+}
+
+[class*="flex-"] {
+  display: flex;
+}
+
+[class*="flex-c"] {
+  flex-direction: column;
+}
+
+.hover:hover {
+  cursor: pointer;
+  color: black;
+  background-color: #d9ebff;
+}
+
+.hover:active {
+  background-color: #007aff;
+  color: white;
+}
+
+.w90,
+.w95 {
+  margin-left: 50px;
+}
+
+.w90 {
+  /* permet de centrer par rapport au header */
+  width: calc(100% - 100px);
+}
+
+.w95 {
+  /* permet de centrer par rapport au header */
+  width: calc(100% - 50px);
+}
+
+.transition {
+  transition: 0.7s;
+}
+
+/* code global aux différentes pages */
+main section:not(.scandales section:not(:first-child)) {
+  float: left;
+  padding-top: 130px;
+  height: calc(100vh - 130px);
+}
+section,
+article.grid_text {
+  min-height: 800px;
+}
+
+main section:not(.w95, .w90) {
+  width: 100%;
+}
+
+main .grid_img {
+  display: grid;
+  grid-template: repeat(2, 1fr) / 480px 1fr;
+  /* deux colone et ligne égales */
+}
+
+main .grid_img > div {
+  /* class utilitaires pour une img a gauche du texte */
+  position: relative;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+main .grid_img h2,
+main .grid_img h3 {
+  /* class utilitaires pour une img a gauche du texte */
+  grid-column: 1;
+  grid-row: 1;
+}
+
+main .grid_img *:not(h2, h3, div) {
+  /* class utilitaires pour une img a gauche du texte */
+  grid-column: 1;
+  grid-row: 2;
+  gap: 30px;
+  justify-content: end;
+}
+
+main .grid_img article,
+main .grid_img h2,
+main .grid_img h3 {
+  width: 100%;
+}
+
+main .grid_img article > *:last-child {
+  margin-bottom: 50px;
+}
+
+main .grid_text {
+  height: calc(100vh - 130px);
+  display: grid;
+  grid-template: 1fr 1fr / 1fr minmax(500px, 1fr);
+  gap: 50px;
+  align-items: flex-end;
+}
+main .grid_text h2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+main .grid_text p {
+  height: 100%;
+  grid-column: 2;
+  grid-row: 2;
+}
+main .grid_text div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+main .grid_text div > div {
+  position: absolute;
+  width: 50%;
+}
+main .grid_text div img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* php page */
+.gifcontent {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 50px;
+}
+.gifcontent img {
+  height: 300px;
+  width: 300px;
+  border-radius: 150vh 150vh 0 0;
+}
+.gifcontent button {
+  width: 300px;
+}
+.gifcontent h2 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+/* chalres leclerc page */
+.lC section > div > nav {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  position: absolute;
+  align-items: center;
+  bottom: 40px;
+  height: fit-content;
+}
+.lC section > div > nav div {
+  cursor: pointer;
+  width: 254px;
+  border-radius: 20px;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+}
+.lC section > div > nav div p {
+  float: left;
+  width: calc(100% - 20px);
+  font-size: 1rem;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.lC section > div > nav div img {
+  margin-top: 20px;
+  margin-left: 10px;
+  height: 30px;
+  width: 30px;
+}
+.lC section > div > nav div.selected {
+  transition: 0.7s;
+  background-color: rgb(255, 255, 255);
+}
+.lC section > div > nav div:not(.selected) {
+  background-color: rgba(255, 255, 255, 0.442);
+}
+/* premiére enfant */
+.index section:first-child > div {
+  /* barre rouge */
+  position: relative;
+}
+
+.index section:first-child > div > div {
+  /* barre rouge */
+  width: 100%;
+  height: 40%;
+  bottom: 50px;
+  position: absolute;
+  background-color: rgba(255, 0, 0, 0.5);
+  border-radius: 50vh 0px 0px 50vh;
+}
+
+/* carroussel */
+.index #carroussel article {
+  position: relative;
+  width: 500%;
+  height: 80%;
+}
+
+.index #carroussel article div,
+.index #carroussel article > div > div,
+.index #scandale article,
+.index #scandale,
+.index #scandale div {
+  gap: 50px;
+}
+
+.index #carroussel article div {
+  /* chaque slide du carrouselle */
+  width: 100vw;
+  height: 100%;
+}
+
+.index #carroussel article > div > *,
+.index #scandale div,
+.index #scandale img {
+  width: 0;
+  flex-grow: 1;
+}
+
+.index #carroussel article > div > div {
+  justify-content: center;
+}
+
+.index #carroussel article div img {
+  border-radius: 0 150vh 150vh 0;
+}
+
+.index #carroussel article div div * {
+  height: fit-content;
+}
+
+.index #carroussel h1,
+.index #carroussel > div:last-child {
+  /* fleche pour naviguer */
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.index #carroussel h1,
+.index #carroussel > div:last-child {
+  margin-top: 20px;
+}
+
+.index #carroussel h1 {
+  padding: 4px 0;
+}
+
+.index #carroussel > div:last-child {
+  /* fleche pour naviguer */
+  width: 230px;
+  justify-content: space-between;
+}
+
+.index #carroussel > div:last-child img {
+  visibility: initial;
+  border-radius: 50vh;
+}
+
+.index #carroussel > div:last-child #back {
+  /* fleche pour naviguer */
+  transform: rotate(180deg);
+}
+
+/* scandale */
+.index #scandale > * {
+  height: 100%;
+}
+
+.index #scandale article {
+  justify-content: center;
+  width: 500px;
+}
+
+.index #scandale div {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.index #scandale div img {
+  border-radius: 50vh;
+  height: 80%;
+}
+.index #scandale div img:hover {
+  transform: scale(1.1);
+}
+/* page vote */
+.vote section > div {
+  background-color: rgba(255, 255, 0, 0.494);
+}
+
+.vote section form {
+  justify-content: end;
+  height: fit-content;
+  gap: 30px;
+}
+
+.vote section form div:first-child input,
+.vote section form {
+  width: calc(100% - 20px);
+}
+.vote section form div {
+  gap: 10px;
+}
+.vote section form div:last-child p {
+  float: left;
+}
+
+.vote section form div label {
+  margin-left: 20px;
+}
+
+.vote section form div:first-child input {
+  padding: 10px;
+}
+.scandales section:first-child {
+  display: grid;
+  grid-template: auto 1fr/ 1fr;
+  gap: 50px;
+
+  overflow: hidden;
+}
+
+.scandales section:first-child h2 {
+  width: 50%;
+  min-width: 600px;
+}
+
+.scandales section:first-child div {
+  align-items: flex-end;
+}
+
+.scandales section:first-child div div {
+  position: relative;
+  width: 0;
+  flex-grow: 1;
+  height: 90%;
+  max-height: 100%;
+  background-color: rgb(141, 128, 118);
+  border-radius: 50vh 50vh 0 0;
+  overflow: hidden;
+}
+
+.scandales section:first-child div div:nth-child(2n) {
+  height: 60%;
+}
+
+.scandales section:first-child div div:hover {
+  height: calc(90% + 20px);
+}
+
+.scandales section:first-child div div:nth-child(2n):hover {
+  height: calc(60% + 20px);
+}
+.scandales section:first-child div div img {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  mix-blend-mode: luminosity;
+}
+.scandales section:first-child div div h3 {
+  padding-top: 10px;
+  z-index: 2;
+  font-weight: 500;
+}
+.scandales section:first-child div div h3 ~ h4 {
+  z-index: 1;
+  padding-top: 38px;
+  padding-bottom: 10px;
+}
+.scandales section:first-child div div h3,
+.scandales section:first-child div div h4 {
+  z-index: 2;
+  position: absolute;
+  text-align: center;
+  mix-blend-mode: luminosity;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  margin-top: 70px;
+  background-color: inherit;
+}
+.scandales section article {
+  padding-top: 130px;
+  height: calc(100vh - 130px);
+}
+.scandales section:not(:first-child) article:nth-child(2n + 1) div div {
+  left: 50%;
+}
+/* color */
+.scandales section:first-child div div:first-child,
+main .grid_text:first-child div div {
+  background-color: #940b3f;
+}
+.scandales section:first-child div div:nth-child(0n + 2),
+main .grid_text:nth-child(0n + 2) div div {
+  background-color: #f3856d;
+}
+.scandales section:first-child div div:nth-last-child(0n + 2),
+main .grid_text:nth-last-child(0n + 2) div div {
+  background-color: #f99438;
+}
+.scandales section:first-child div div:last-child,
+main .grid_text:last-child div div {
+  background-color: #ffc310;
+}
+/* header */
+
+header {
+  z-index: 3;
+  width: calc(100% - 100px);
+  height: 35px;
+  margin: 50px;
+  position: fixed;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header > a,
+header > a picture,
+header > a picture img {
+  width: auto;
+  height: 35px;
+}
+
+header #burgercontent,
+header > a,
+header h1 {
+  z-index: 10;
+}
+
+header h1 {
+  flex-grow: 1;
+  height: fit-content;
+  text-align: center;
+  padding-right: 75px;
+}
+
+header #burgercontent {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+header #burgercontent .burger,
+header #burgercontent .burger::after,
+header #burgercontent .burger::before {
+  transition: 0.7s;
+  content: "";
+  border-radius: 1px;
+  height: 1.5px;
+  position: absolute;
+  right: 0;
+}
+
+header #burgercontent .burger.open,
+header #burgercontent .burger::after,
+header #burgercontent .burger::before {
+  background-color: #1d1d1b;
+}
+
+/* burger open  */
+header #burgercontent .burger.open {
+  width: 20px;
+}
+
+header #burgercontent .burger.open::before {
+  top: -7.5px;
+}
+
+header #burgercontent .burger.open::after {
+  top: 7.5px;
+}
+
+header #burgercontent .burger.open::after,
+header #burgercontent .burger.open::before {
+  width: 20px;
+  height: 1.5px;
+}
+
+/* Burger Close */
+header .burger.close,
+.burger.closeclick,
+header #burgercontent .burger.open {
+  top: 50%;
+  left: 7.5px;
+}
+
+header #burgercontent .burger.close::after,
+header #burgercontent .burger.close::before,
+header #burgercontent .burger.closeclick::before {
+  width: 20.52px;
+  top: 0;
+  left: 0;
+}
+
+header #burgercontent .burger.close::before,
+.burger .closeclick::before {
+  transform: rotate(46.97deg);
+}
+
+header #burgercontent .burger.close::after,
+header #burgercontent .burger.closeclick::after {
+  transform: rotate(-46.97deg);
+}
+
+header #burgercontent .burger.closeclick::after {
+  width: 10.52px;
+  top: 3.5px;
+}
+
+header nav {
+  justify-content: center;
+  z-index: 9;
+  position: absolute;
+  width: 400px;
+  height: 100vh;
+  background-color: white;
+  right: -50px;
+  top: -50px;
+  align-items: center;
+  gap: 50px 0;
+  transform: translateY(0%);
+  transition: 0.7s;
+}
+
+header nav.close {
+  transform: translateY(100%);
+}
+
+header nav a {
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 700px) {
+  header {
+    width: calc(100% - 40px);
+    margin: 20px;
+  }
+
+  header h1 {
+    padding-right: 0;
+  }
+
+  header nav {
+    width: 100vw;
+    right: -20px;
+    top: -20px;
+  }
+}
+
+footer {
+  float: left;
+  width: 90%;
+  height: fit-content;
+  margin: 0 5%;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+footer > div {
+  display: flex;
+  align-items: center;
+}
+
+footer > div a {
+  font-weight: 300;
+}
+
+footer > div:first-child {
+  justify-content: left;
+}
+
+footer > div:last-child {
+  justify-content: center;
+  gap: 10px 50px;
+  flex-wrap: wrap;
+}
+
+footer div:first-child a {
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+footer div:first-child a::before {
+  content: "> ";
+}
+
+footer div:first-child img {
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+}
+/* responsive */
+@media only screen and (max-width: 1300px) {
+  h2 {
+    font-size: 3.15rem;
+  }
+  /* scandales */
+  .scandales section:first-child div div:nth-child(2n) {
+    display: none;
+  }
+  main .grid_text {
+    height: calc(100vh - 180px);
+    grid-template: calc(100vh - 381px) 331px / 1fr 2fr;
+    gap: 20px;
+    align-items: center;
+  }
+  main .grid_text h2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  main .grid_text p {
+    height: fit-content;
+    grid-column: 2;
+    grid-row: 2;
+  }
+  main .grid_text div {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+  /*  carroussek */
+  .index #carroussel article > div,
+  .index #scandale {
+    flex-direction: column;
+  }
+
+  .index #carroussel article div img {
+    height: 0;
+  }
+
+  .index #carroussel article > div > * {
+    width: 100%;
+  }
+
+  .index #carroussel article > div > div,
+  .index #scandale article {
+    flex-grow: unset;
+    height: fit-content;
+  }
+
+  .index #scandale div {
+    height: 500px;
+    align-items: flex-start;
+  }
+
+  /* acnadale */
+  .index #scandale div {
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  .index #scandale article {
+    width: 100%;
+  }
+
+  /* vote */
+  .grid_img h2 ~ h3 {
+    display: none;
+  }
+
+  main .grid_img {
+    height: fit-content;
+    grid-template: auto calc(100vh - 400px) auto / 1fr;
+    gap: 20px;
+    grid-auto-rows: min-content;
+  }
+
+  main .grid_img article,
+  .vote section form {
+    /* crepositionement du texte */
+    height: fit-content;
+    grid-row: 3;
+  }
+
+  .vote section form {
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+  }
+
+  main .grid_img div {
+    /* class utilitaires pour une img en dessous du texte */
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  main .grid_img article {
+    margin-top: 20px;
+  }
+
+  main .grid_img article > *:last-child {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  main .grid_text {
+    height: calc(100vh - 100px);
+    grid-template: 1fr auto auto / 1fr;
+  }
+  main .grid_text h2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  main .grid_text p {
+    height: fit-content;
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+  html {
+    font-size: 14px;
+  }
+
+  main section {
+    height: calc(100vh - 75px);
+  }
+
+  .index #scandale {
+    max-height: 100vh;
+    padding-top: 0;
+    flex-direction: column-reverse;
+  }
+  .index #scandale div {
+    gap: 10px;
+  }
+  .index #scandale div img {
+    height: 100%;
+  }
+  /* scandales */
+  .scandales section:first-child div div:not(:first-child) {
+    display: none;
+  }
+  .scandales section:first-child h2 {
+    width: 100%;
+    min-width: unset;
+  }
+
+  /* global */
+  .w90,
+  .w95 {
+    margin-left: 20px;
+  }
+
+  .w90 {
+    /* permet de centrer par rapport au header */
+    width: calc(100% - 40px);
+  }
+
+  .w95 {
+    /* permet de centrer par rapport au header */
+    width: calc(100% - 40px);
+  }
+
+  /* changement taille des polices */
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  /* premiére apge avec les trois pilotes */
+  main section:first-child {
+    padding-top: 75px;
+  }
+
+  /* vote */
+  .vote section {
+    height: fit-content;
+    min-height: unset;
+  }
+
+  .vote section form {
+    height: fit-content;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
+
+  .vote section form div:first-child p input,
+  .vote section form div,
+  .vote section form div:first-child p {
+    width: 100%;
+  }
+}

@@ -51,38 +51,32 @@
         </nav>
     </header>
 
-    <main class="vote w90">
-        <section class="grid grid_img">
-            <h2 class="anim">Quelle est le Pilote de l’année</h2>
-            <form class="flex-c anim" method="post" action="formok.php">
-                <div class="flex-c">
-                    <p><input required="required" type="text" name="pseudo" placeholder="Votre pseudo"></p>
-                    <p><input required="required" min="1" max="110" type="number" name="age"
-                            placeholder="Entrer votre age"></p>
-                    <p><input required="required" type="email" name="email" placeholder="mail@baudrypassion.fr"></p>
-                </div>
-                <div class="flex-c input">
-                    <p><input type="radio" name="vote" id="CL" value="Charles Leclerc" checked><label for="CL">Charles
-                            Leclerc</label>
-                    </p>
-                    <p><input type="radio" name="vote" id="MV" value="Max Verstapend"><label for="MV">Max
-                            Verstapend</label></p>
-                    <p><input type="radio" name="vote" id="GR" value="George Russel"><label for="GR">George
-                            Russel</label></p>
-                    <p><input type="radio" name="vote" id="SP" value="Sergio Perez"><label for="SP">Sergio Perez</label>
-                    </p>
-                </div>
-                <input class="hover" type="submit" value="Voter">
-            </form>
+    <main class="lC">
+        <section class="grid_img w90">
+            <h2 class="anim">L’histoire de charles leclerc🇲🇨</h2>
+            <article class="flex-c anim">
+                <h4 id="texteareacl">Charles leclerc a commencé petit avec le karting, ces premières années ont été très importantes pour son développement en tant que pilote. Il a commencé le karting à l'âge de six ans et a rapidement gravi les échelons, remportant plusieurs championnats en France et en Italie. Son succès en karting lui a valu une place à la Ferrari Driver Academy</h4>
             </article>
-            <div id="piloteimgvote" class="hw100 transition">
-                <img id="piloteimgvote_img" src="src/img/pilote/CL/Portrait1.png"
+            <div class="hw100">
+                <nav class="w90 anim">
+                    <div onclick="clickCL(1)" id="info1" class="selected">
+                        <p>Les débuts en karting</p>
+                        <img src="src/asset/switch.svg" alt="">
+                    </div>
+                    <div onclick="clickCL(2)" id="info2">
+                        <p>Les débuts en monoplaces</p>
+                        <img src="src/asset/switch.svg" alt="">
+                    </div>
+                    <div onclick="clickCL(3)" id="info3">
+                        <p>Arrivé en F1</p>
+                        <img src="src/asset/switch.svg" alt="">
+                    </div>
+                </nav>
+                <img src="https://f1only.fr/wp-content/uploads/2019/10/charles-leclerc-ferrari-2.jpg"
                     alt="Pilotes de formule 1 en noir et blanc sauf Charles leclerc" class="hw100">
             </div>
         </section>
-
     </main>
-
     <footer>
         <div class="anim">
             <img src="src/asset/LogoResponsive.ico" alt="logo BaudryPassion">
@@ -96,6 +90,7 @@
             <a href=" vote.html" class="hover">Voter</a>
         </div>
     </footer>
+
     <script src="src/js/global.js"></script>
 </body>
 
